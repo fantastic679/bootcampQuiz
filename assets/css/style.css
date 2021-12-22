@@ -9,16 +9,18 @@
 }
 
 body {
+    background-color: lightgray;
     max-width: 500px;
     margin: auto;
     padding-top: 200px;
 }
 
 .button {
-    background-color: #4CAF50; /* Green */
+    background-color: darkblue;
     border: none;
-    color: white;
-    padding: 15px 32px;
+    color: lightgray;
+    /* padding: 15px 32px; */
+    /* border-radius: 12px; */
     text-align: center;
     text-decoration: none;
     display: inline-block;
