@@ -699,10 +699,10 @@ function question9answer3BtnAction() {
     document.getElementById("summarynext").style.display = "block";
 }
 
+// summary button
 var summarynextBtn = document.querySelector("#summarynext");
 summarynextBtn.addEventListener("click", summarynextBtnAction);
 function summarynextBtnAction() {
-    console.log("hi!");
     document.getElementById("feedbackText").innerText = "";
     document.getElementById("summarynext").style.display = "none";
     document.getElementById("question9").style.display = "none";
@@ -710,6 +710,27 @@ function summarynextBtnAction() {
 }
 
 // ==============================================================================================
-// 
+// Summary page
 // ==============================================================================================
 
+// submit button
+var submitBtn = document.querySelector("#submit");
+submitBtn.addEventListener("click", submitBtnAction);
+function submitBtnAction() {
+    //////// NEEDS TO ADD CODE TO ACTUALLY SUBMIT ////////
+    document.getElementById("summary").style.display = "none";
+    document.getElementById("highscores").style.display = "block";
+}
+
+// ==============================================================================================
+// Highscores page
+// ==============================================================================================
+
+// reset quiz button
+var resetBtn = document.querySelector("#reset");
+resetBtn.addEventListener("click", resetBtnAction);
+function resetBtnAction() {
+    //////// NEEDS TO ADD CODE TO ACTUALLY RESET ////////
+    document.getElementById("highscores").style.display = "none";
+    document.getElementById("question0").style.display = "block";
+}

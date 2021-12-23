@@ -102,15 +102,23 @@
 
     <div id="summary">
         <h2>Summary</h2>
-        <p>You scored X out of Y questions correctly.</p>
-        <p>You completed the quiz in Z seconds.</p>
-        <button type="button" class="button" id="highscores">Highscores</button>
-        <button type="button" class="button" id="reset">Reset quiz</button>
+        <p>You answered X questions correctly.</p>
+        <p>Please submit your initials to view the highscores.</p>
+        <input type="text"><br>
+        <button type="button" class="button" id="submit">Submit</button>
+        <br>
     </div>
 
-
-
-    <!-- Responsive section -->
+    <div id="highscores">
+        <h2>Highscores</h2>
+        <ol>
+            <li>AB</li>
+            <li>BC</li>
+        </ol>
+        <button type="button" class="button" id="reset">Reset quiz</button>
+    </div>
+        
+      <!-- Responsive section -->
     <div id="feedback">
         <p id="feedbackText"></p>
         <button type="button" class="button" id="question1next">Next question</button>
