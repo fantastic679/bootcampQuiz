@@ -63,13 +63,15 @@ Of course, there are many way to do this, but this is just a starting point.
 ## Changing page context
 
 Our base HTML will have context these three sections.
-
 We will use some basic CSS to set underlying theme of the page.
-
 We will use Javascript to dynamically change the context of the page as per user input. 
 
 # Preliminary coding process
 
-
-
-
+After coding this, this began to become very clunky.
+We will redivise our strategy
+We will have everything on the page
+And set things to being hidden
+Only on certain prompts do we hide the current content and show the next content
+I suppose we could leave the title the way it is
+However, I will code this from scratch
