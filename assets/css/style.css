@@ -13,6 +13,8 @@ body {
     max-width: 500px;
     margin: auto;
     padding-top: 200px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .button {

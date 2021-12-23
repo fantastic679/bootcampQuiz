@@ -1,3 +1,12 @@
+// ==============================================================================================
+// NUMBERING STARTS AT 0
+// ==============================================================================================
+
+
+// ==============================================================================================
+// QUESTION 0 is the start quiz page
+// ==============================================================================================
+
 // start quiz button
 var question0answer0Btn = document.querySelector("#question0answer0");
 question0answer0Btn.addEventListener("click", question0answer0BtnAction);
@@ -6,74 +15,60 @@ function question0answer0BtnAction() {
     document.getElementById("question1").style.display = "block";
 }
 
-
 function question1deactivateButtons() {
     question1answer0Btn.removeEventListener("click", question1answer0BtnAction);
     question1answer1Btn.removeEventListener("click", question1answer1BtnAction);
     question1answer2Btn.removeEventListener("click", question1answer2BtnAction);
     question1answer3Btn.removeEventListener("click", question1answer3BtnAction);
 }
-
 function question2deactivateButtons() {
     question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
     question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
     question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
     question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
 }
-
 function question3deactivateButtons() {
     question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
     question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
     question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
     question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
 }
-
 function question4deactivateButtons() {
     question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
     question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
     question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
     question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
 }
-
 function question5deactivateButtons() {
     question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
     question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
     question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
     question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
 }
-
 function question6deactivateButtons() {
     question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
     question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
     question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
     question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
 }
-
 function question7deactivateButtons() {
     question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
     question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
     question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
     question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
 }
-
 function question8deactivateButtons() {
     question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
     question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
     question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
     question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
 }
-
 function question9deactivateButtons() {
     question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
     question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
     question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
     question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
 }
-
-// ==============================================================================================
-// NUMBERING STARTS AT 0
-// ==============================================================================================
-
 
 // ==============================================================================================
 // QUESTION 1 | ANSWER BUTTON 2
