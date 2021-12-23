@@ -86,8 +86,630 @@ function question1answer3BtnAction() {
 var question1nextBtn = document.querySelector("#question1next");
 question1nextBtn.addEventListener("click", question1nextBtnAction);
 function question1nextBtnAction() {
+    document.getElementById("feedbackText").innerText = "";
+    document.getElementById("question1next").style.display = "none";
     document.getElementById("question1").style.display = "none";
     document.getElementById("question2").style.display = "block";
 }
 
 // ==============================================================================================
+// QUESTION 2 | ANSWER BUTTON 1
+// ==============================================================================================
+
+// question2answer0 button
+var question2answer0Btn = document.querySelector("#question2answer0");
+question2answer0Btn.addEventListener("click", question2answer0BtnAction);
+function question2answer0BtnAction() {
+    question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
+    question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
+    question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
+    question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
+    document.getElementById("question2answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question2answer1").style.backgroundColor = "DarkGreen";
+    document.getElementById("question2answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question2answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question2next").style.display = "block";
+}
+
+// question2answer1 button
+var question2answer1Btn = document.querySelector("#question2answer1");
+question2answer1Btn.addEventListener("click", question2answer1BtnAction);
+function question2answer1BtnAction() {
+    question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
+    question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
+    question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
+    question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
+    document.getElementById("question2answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question2answer1").style.backgroundColor = "DarkGreen";
+    document.getElementById("question2answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question2answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Correct!";
+    document.getElementById("question2next").style.display = "block";
+}
+
+// question2answer2 button
+var question2answer2Btn = document.querySelector("#question2answer2");
+question2answer2Btn.addEventListener("click", question2answer2BtnAction);
+function question2answer2BtnAction() {
+    question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
+    question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
+    question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
+    question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
+    document.getElementById("question2answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question2answer1").style.backgroundColor = "DarkGreen";
+    document.getElementById("question2answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question2answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question2next").style.display = "block";
+}
+
+// question2answer3 button
+var question2answer3Btn = document.querySelector("#question2answer3");
+question2answer3Btn.addEventListener("click", question2answer3BtnAction);
+function question2answer3BtnAction() {
+    question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
+    question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
+    question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
+    question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
+    document.getElementById("question2answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question2answer1").style.backgroundColor = "DarkGreen";
+    document.getElementById("question2answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question2answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question2next").style.display = "block";
+}
+
+var question2nextBtn = document.querySelector("#question2next");
+question2nextBtn.addEventListener("click", question2nextBtnAction);
+function question2nextBtnAction() {
+    document.getElementById("feedbackText").innerText = "";
+    document.getElementById("question2next").style.display = "none";
+    document.getElementById("question2").style.display = "none";
+    document.getElementById("question3").style.display = "block";
+}
+
+// ==============================================================================================
+// QUESTION 3 | ANSWER BUTTON 2
+// ==============================================================================================
+
+// question3answer0 button
+var question3answer0Btn = document.querySelector("#question3answer0");
+question3answer0Btn.addEventListener("click", question3answer0BtnAction);
+function question3answer0BtnAction() {
+    question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
+    question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
+    question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
+    question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
+    document.getElementById("question3answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question3answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question3answer2").style.backgroundColor = "DarkGreen";
+    document.getElementById("question3answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question3next").style.display = "block";
+}
+
+// question3answer1 button
+var question3answer1Btn = document.querySelector("#question3answer1");
+question3answer1Btn.addEventListener("click", question3answer1BtnAction);
+function question3answer1BtnAction() {
+    question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
+    question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
+    question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
+    question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
+    document.getElementById("question3answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question3answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question3answer2").style.backgroundColor = "DarkGreen";
+    document.getElementById("question3answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question3next").style.display = "block";
+}
+
+// question3answer2 button
+var question3answer2Btn = document.querySelector("#question3answer2");
+question3answer2Btn.addEventListener("click", question3answer2BtnAction);
+function question3answer2BtnAction() {
+    question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
+    question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
+    question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
+    question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
+    document.getElementById("question3answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question3answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question3answer2").style.backgroundColor = "DarkGreen";
+    document.getElementById("question3answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Correct!";
+    document.getElementById("question3next").style.display = "block";
+}
+
+// question3answer3 button
+var question3answer3Btn = document.querySelector("#question3answer3");
+question3answer3Btn.addEventListener("click", question3answer3BtnAction);
+function question3answer3BtnAction() {
+    question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
+    question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
+    question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
+    question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
+    document.getElementById("question3answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question3answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question3answer2").style.backgroundColor = "DarkGreen";
+    document.getElementById("question3answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question3next").style.display = "block";
+}
+
+var question3nextBtn = document.querySelector("#question3next");
+question3nextBtn.addEventListener("click", question3nextBtnAction);
+function question3nextBtnAction() {
+    document.getElementById("feedbackText").innerText = "";
+    document.getElementById("question3next").style.display = "none";
+    document.getElementById("question3").style.display = "none";
+    document.getElementById("question4").style.display = "block";
+}
+
+// ==============================================================================================
+// QUESTION 4 | ANSWER BUTTON 3
+// ==============================================================================================
+
+// question4answer0 button
+var question4answer0Btn = document.querySelector("#question4answer0");
+question4answer0Btn.addEventListener("click", question4answer0BtnAction);
+function question4answer0BtnAction() {
+    question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
+    question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
+    question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
+    question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
+    document.getElementById("question4answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question4next").style.display = "block";
+}
+
+// question4answer1 button
+var question4answer1Btn = document.querySelector("#question4answer1");
+question4answer1Btn.addEventListener("click", question4answer1BtnAction);
+function question4answer1BtnAction() {
+    question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
+    question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
+    question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
+    question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
+    document.getElementById("question4answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question4next").style.display = "block";
+}
+
+// question4answer2 button
+var question4answer2Btn = document.querySelector("#question4answer2");
+question4answer2Btn.addEventListener("click", question4answer2BtnAction);
+function question4answer2BtnAction() {
+    question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
+    question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
+    question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
+    question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
+    document.getElementById("question4answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question4next").style.display = "block";
+}
+
+// question4answer3 button
+var question4answer3Btn = document.querySelector("#question4answer3");
+question4answer3Btn.addEventListener("click", question4answer3BtnAction);
+function question4answer3BtnAction() {
+    question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
+    question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
+    question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
+    question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
+    document.getElementById("question4answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question4answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Correct!";
+    document.getElementById("question4next").style.display = "block";
+}
+
+var question4nextBtn = document.querySelector("#question4next");
+question4nextBtn.addEventListener("click", question4nextBtnAction);
+function question4nextBtnAction() {
+    document.getElementById("feedbackText").innerText = "";
+    document.getElementById("question4next").style.display = "none";
+    document.getElementById("question4").style.display = "none";
+    document.getElementById("question5").style.display = "block";
+}
+
+// ==============================================================================================
+// QUESTION 5 | ANSWER BUTTON 0
+// ==============================================================================================
+
+// question5answer0 button
+var question5answer0Btn = document.querySelector("#question5answer0");
+question5answer0Btn.addEventListener("click", question5answer0BtnAction);
+function question5answer0BtnAction() {
+    question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
+    question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
+    question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
+    question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
+    document.getElementById("question5answer0").style.backgroundColor = "DarkGreen";
+    document.getElementById("question5answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question5answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question5answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Correct!";
+    document.getElementById("question5next").style.display = "block";
+}
+
+// question5answer1 button
+var question5answer1Btn = document.querySelector("#question5answer1");
+question5answer1Btn.addEventListener("click", question5answer1BtnAction);
+function question5answer1BtnAction() {
+    question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
+    question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
+    question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
+    question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
+    document.getElementById("question5answer0").style.backgroundColor = "DarkGreen";
+    document.getElementById("question5answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question5answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question5answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question5next").style.display = "block";
+}
+
+// question5answer2 button
+var question5answer2Btn = document.querySelector("#question5answer2");
+question5answer2Btn.addEventListener("click", question5answer2BtnAction);
+function question5answer2BtnAction() {
+    question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
+    question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
+    question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
+    question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
+    document.getElementById("question5answer0").style.backgroundColor = "DarkGreen";
+    document.getElementById("question5answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question5answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question5answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question5next").style.display = "block";
+}
+
+// question5answer3 button
+var question5answer3Btn = document.querySelector("#question5answer3");
+question5answer3Btn.addEventListener("click", question5answer3BtnAction);
+function question5answer3BtnAction() {
+    question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
+    question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
+    question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
+    question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
+    document.getElementById("question5answer0").style.backgroundColor = "DarkGreen";
+    document.getElementById("question5answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question5answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question5answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question5next").style.display = "block";
+}
+
+var question5nextBtn = document.querySelector("#question5next");
+question5nextBtn.addEventListener("click", question5nextBtnAction);
+function question5nextBtnAction() {
+    document.getElementById("feedbackText").innerText = "";
+    document.getElementById("question5next").style.display = "none";
+    document.getElementById("question5").style.display = "none";
+    document.getElementById("question6").style.display = "block";
+}
+
+// ==============================================================================================
+// QUESTION 6 | ANSWER BUTTON 1
+// ==============================================================================================
+
+// question6answer0 button
+var question6answer0Btn = document.querySelector("#question6answer0");
+question6answer0Btn.addEventListener("click", question6answer0BtnAction);
+function question6answer0BtnAction() {
+    question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
+    question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
+    question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
+    question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
+    document.getElementById("question6answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question6answer1").style.backgroundColor = "DarkGreen";
+    document.getElementById("question6answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question6answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question6next").style.display = "block";
+}
+
+// question6answer1 button
+var question6answer1Btn = document.querySelector("#question6answer1");
+question6answer1Btn.addEventListener("click", question6answer1BtnAction);
+function question6answer1BtnAction() {
+    question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
+    question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
+    question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
+    question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
+    document.getElementById("question6answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question6answer1").style.backgroundColor = "DarkGreen";
+    document.getElementById("question6answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question6answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Correct!";
+    document.getElementById("question6next").style.display = "block";
+}
+
+// question6answer2 button
+var question6answer2Btn = document.querySelector("#question6answer2");
+question6answer2Btn.addEventListener("click", question6answer2BtnAction);
+function question6answer2BtnAction() {
+    question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
+    question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
+    question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
+    question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
+    document.getElementById("question6answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question6answer1").style.backgroundColor = "DarkGreen";
+    document.getElementById("question6answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question6answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question6next").style.display = "block";
+}
+
+// question6answer3 button
+var question6answer3Btn = document.querySelector("#question6answer3");
+question6answer3Btn.addEventListener("click", question6answer3BtnAction);
+function question6answer3BtnAction() {
+    question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
+    question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
+    question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
+    question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
+    document.getElementById("question6answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question6answer1").style.backgroundColor = "DarkGreen";
+    document.getElementById("question6answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question6answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question6next").style.display = "block";
+}
+
+var question6nextBtn = document.querySelector("#question6next");
+question6nextBtn.addEventListener("click", question6nextBtnAction);
+function question6nextBtnAction() {
+    document.getElementById("feedbackText").innerText = "";
+    document.getElementById("question6next").style.display = "none";
+    document.getElementById("question6").style.display = "none";
+    document.getElementById("question7").style.display = "block";
+}
+
+// ==============================================================================================
+// QUESTION 7 | ANSWER BUTTON 0
+// ==============================================================================================
+
+// question7answer0 button
+var question7answer0Btn = document.querySelector("#question7answer0");
+question7answer0Btn.addEventListener("click", question7answer0BtnAction);
+function question7answer0BtnAction() {
+    question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
+    question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
+    question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
+    question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
+    document.getElementById("question7answer0").style.backgroundColor = "DarkGreen";
+    document.getElementById("question7answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question7answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question7answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Correct!";
+    document.getElementById("question7next").style.display = "block";
+}
+
+// question7answer1 button
+var question7answer1Btn = document.querySelector("#question7answer1");
+question7answer1Btn.addEventListener("click", question7answer1BtnAction);
+function question7answer1BtnAction() {
+    question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
+    question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
+    question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
+    question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
+    document.getElementById("question7answer0").style.backgroundColor = "DarkGreen";
+    document.getElementById("question7answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question7answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question7answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question7next").style.display = "block";
+}
+
+// question7answer2 button
+var question7answer2Btn = document.querySelector("#question7answer2");
+question7answer2Btn.addEventListener("click", question7answer2BtnAction);
+function question7answer2BtnAction() {
+    question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
+    question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
+    question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
+    question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
+    document.getElementById("question7answer0").style.backgroundColor = "DarkGreen";
+    document.getElementById("question7answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question7answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question7answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question7next").style.display = "block";
+}
+
+// question7answer3 button
+var question7answer3Btn = document.querySelector("#question7answer3");
+question7answer3Btn.addEventListener("click", question7answer3BtnAction);
+function question7answer3BtnAction() {
+    question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
+    question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
+    question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
+    question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
+    document.getElementById("question7answer0").style.backgroundColor = "DarkGreen";
+    document.getElementById("question7answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question7answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question7answer3").style.backgroundColor = "DarkRed";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question7next").style.display = "block";
+}
+
+var question7nextBtn = document.querySelector("#question7next");
+question7nextBtn.addEventListener("click", question7nextBtnAction);
+function question7nextBtnAction() {
+    document.getElementById("feedbackText").innerText = "";
+    document.getElementById("question7next").style.display = "none";
+    document.getElementById("question7").style.display = "none";
+    document.getElementById("question8").style.display = "block";
+}
+
+// ==============================================================================================
+// QUESTION 8 | ANSWER BUTTON 3
+// ==============================================================================================
+
+// question8answer0 button
+var question8answer0Btn = document.querySelector("#question8answer0");
+question8answer0Btn.addEventListener("click", question8answer0BtnAction);
+function question8answer0BtnAction() {
+    question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
+    question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
+    question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
+    question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
+    document.getElementById("question8answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question8next").style.display = "block";
+}
+
+// question8answer1 button
+var question8answer1Btn = document.querySelector("#question8answer1");
+question8answer1Btn.addEventListener("click", question8answer1BtnAction);
+function question8answer1BtnAction() {
+    question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
+    question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
+    question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
+    question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
+    document.getElementById("question8answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question8next").style.display = "block";
+}
+
+// question8answer2 button
+var question8answer2Btn = document.querySelector("#question8answer2");
+question8answer2Btn.addEventListener("click", question8answer2BtnAction);
+function question8answer2BtnAction() {
+    question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
+    question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
+    question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
+    question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
+    document.getElementById("question8answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("question8next").style.display = "block";
+}
+
+// question8answer3 button
+var question8answer3Btn = document.querySelector("#question8answer3");
+question8answer3Btn.addEventListener("click", question8answer3BtnAction);
+function question8answer3BtnAction() {
+    question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
+    question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
+    question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
+    question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
+    document.getElementById("question8answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question8answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Correct!";
+    document.getElementById("question8next").style.display = "block";
+}
+
+var question8nextBtn = document.querySelector("#question8next");
+question8nextBtn.addEventListener("click", question8nextBtnAction);
+function question8nextBtnAction() {
+    document.getElementById("feedbackText").innerText = "";
+    document.getElementById("question8next").style.display = "none";
+    document.getElementById("question8").style.display = "none";
+    document.getElementById("question9").style.display = "block";
+}
+
+// ==============================================================================================
+// QUESTION 9 | ANSWER BUTTON 3
+// ==============================================================================================
+
+// question9answer0 button
+var question9answer0Btn = document.querySelector("#question9answer0");
+question9answer0Btn.addEventListener("click", question9answer0BtnAction);
+function question9answer0BtnAction() {
+    question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
+    question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
+    question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
+    question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
+    document.getElementById("question9answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("summarynext").style.display = "block";
+}
+
+// question9answer1 button
+var question9answer1Btn = document.querySelector("#question9answer1");
+question9answer1Btn.addEventListener("click", question9answer1BtnAction);
+function question9answer1BtnAction() {
+    question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
+    question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
+    question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
+    question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
+    document.getElementById("question9answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("summarynext").style.display = "block";
+}
+
+// question9answer2 button
+var question9answer2Btn = document.querySelector("#question9answer2");
+question9answer2Btn.addEventListener("click", question9answer2BtnAction);
+function question9answer2BtnAction() {
+    question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
+    question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
+    question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
+    question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
+    document.getElementById("question9answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Incorrect!";
+    document.getElementById("summarynext").style.display = "block";
+}
+
+// question9answer3 button
+var question9answer3Btn = document.querySelector("#question9answer3");
+question9answer3Btn.addEventListener("click", question9answer3BtnAction);
+function question9answer3BtnAction() {
+    question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
+    question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
+    question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
+    question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
+    document.getElementById("question9answer0").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer1").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer2").style.backgroundColor = "DarkRed";
+    document.getElementById("question9answer3").style.backgroundColor = "DarkGreen";
+    document.getElementById("feedbackText").innerText = "Correct!";
+    document.getElementById("summarynext").style.display = "block";
+}
+
+var summarynextBtn = document.querySelector("#summarynext");
+summarynextBtn.addEventListener("click", summarynextBtnAction);
+function summarynextBtnAction() {
+    console.log("hi!");
+    document.getElementById("feedbackText").innerText = "";
+    document.getElementById("summarynext").style.display = "none";
+    document.getElementById("question9").style.display = "none";
+    document.getElementById("summary").style.display = "block";
+}
+
+// ==============================================================================================
+// 
+// ==============================================================================================
+
