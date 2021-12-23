@@ -1,13 +1,73 @@
-
-
-
 // start quiz button
 var question0answer0Btn = document.querySelector("#question0answer0");
 question0answer0Btn.addEventListener("click", question0answer0BtnAction);
 function question0answer0BtnAction() {
-    question0answer0Btn.removeEventListener("click", question0answer0BtnAction);
     document.getElementById("question0").style.display = "none";
     document.getElementById("question1").style.display = "block";
+}
+
+
+function question1deactivateButtons() {
+    question1answer0Btn.removeEventListener("click", question1answer0BtnAction);
+    question1answer1Btn.removeEventListener("click", question1answer1BtnAction);
+    question1answer2Btn.removeEventListener("click", question1answer2BtnAction);
+    question1answer3Btn.removeEventListener("click", question1answer3BtnAction);
+}
+
+function question2deactivateButtons() {
+    question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
+    question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
+    question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
+    question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
+}
+
+function question3deactivateButtons() {
+    question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
+    question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
+    question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
+    question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
+}
+
+function question4deactivateButtons() {
+    question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
+    question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
+    question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
+    question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
+}
+
+function question5deactivateButtons() {
+    question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
+    question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
+    question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
+    question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
+}
+
+function question6deactivateButtons() {
+    question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
+    question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
+    question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
+    question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
+}
+
+function question7deactivateButtons() {
+    question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
+    question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
+    question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
+    question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
+}
+
+function question8deactivateButtons() {
+    question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
+    question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
+    question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
+    question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
+}
+
+function question9deactivateButtons() {
+    question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
+    question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
+    question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
+    question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
 }
 
 // ==============================================================================================
@@ -23,10 +83,7 @@ function question0answer0BtnAction() {
 var question1answer0Btn = document.querySelector("#question1answer0");
 question1answer0Btn.addEventListener("click", question1answer0BtnAction);
 function question1answer0BtnAction() {
-    question1answer0Btn.removeEventListener("click", question1answer0BtnAction);
-    question1answer1Btn.removeEventListener("click", question1answer1BtnAction);
-    question1answer2Btn.removeEventListener("click", question1answer2BtnAction);
-    question1answer3Btn.removeEventListener("click", question1answer3BtnAction);
+    question1deactivateButtons();
     document.getElementById("question1answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question1answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question1answer2").style.backgroundColor = "DarkGreen";
@@ -39,10 +96,7 @@ function question1answer0BtnAction() {
 var question1answer1Btn = document.querySelector("#question1answer1");
 question1answer1Btn.addEventListener("click", question1answer1BtnAction);
 function question1answer1BtnAction() {
-    question1answer0Btn.removeEventListener("click", question1answer0BtnAction);
-    question1answer1Btn.removeEventListener("click", question1answer1BtnAction);
-    question1answer2Btn.removeEventListener("click", question1answer2BtnAction);
-    question1answer3Btn.removeEventListener("click", question1answer3BtnAction);
+    question1deactivateButtons();
     document.getElementById("question1answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question1answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question1answer2").style.backgroundColor = "DarkGreen";
@@ -55,10 +109,7 @@ function question1answer1BtnAction() {
 var question1answer2Btn = document.querySelector("#question1answer2");
 question1answer2Btn.addEventListener("click", question1answer2BtnAction);
 function question1answer2BtnAction() {
-    question1answer0Btn.removeEventListener("click", question1answer0BtnAction);
-    question1answer1Btn.removeEventListener("click", question1answer1BtnAction);
-    question1answer2Btn.removeEventListener("click", question1answer2BtnAction);
-    question1answer3Btn.removeEventListener("click", question1answer3BtnAction);
+    question1deactivateButtons();
     document.getElementById("question1answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question1answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question1answer2").style.backgroundColor = "DarkGreen";
@@ -71,10 +122,7 @@ function question1answer2BtnAction() {
 var question1answer3Btn = document.querySelector("#question1answer3");
 question1answer3Btn.addEventListener("click", question1answer3BtnAction);
 function question1answer3BtnAction() {
-    question1answer0Btn.removeEventListener("click", question1answer0BtnAction);
-    question1answer1Btn.removeEventListener("click", question1answer1BtnAction);
-    question1answer2Btn.removeEventListener("click", question1answer2BtnAction);
-    question1answer3Btn.removeEventListener("click", question1answer3BtnAction);
+    question1deactivateButtons();
     document.getElementById("question1answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question1answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question1answer2").style.backgroundColor = "DarkGreen";
@@ -100,10 +148,7 @@ function question1nextBtnAction() {
 var question2answer0Btn = document.querySelector("#question2answer0");
 question2answer0Btn.addEventListener("click", question2answer0BtnAction);
 function question2answer0BtnAction() {
-    question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
-    question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
-    question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
-    question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
+    question2deactivateButtons();
     document.getElementById("question2answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question2answer1").style.backgroundColor = "DarkGreen";
     document.getElementById("question2answer2").style.backgroundColor = "DarkRed";
@@ -116,10 +161,7 @@ function question2answer0BtnAction() {
 var question2answer1Btn = document.querySelector("#question2answer1");
 question2answer1Btn.addEventListener("click", question2answer1BtnAction);
 function question2answer1BtnAction() {
-    question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
-    question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
-    question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
-    question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
+    question2deactivateButtons();
     document.getElementById("question2answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question2answer1").style.backgroundColor = "DarkGreen";
     document.getElementById("question2answer2").style.backgroundColor = "DarkRed";
@@ -132,10 +174,7 @@ function question2answer1BtnAction() {
 var question2answer2Btn = document.querySelector("#question2answer2");
 question2answer2Btn.addEventListener("click", question2answer2BtnAction);
 function question2answer2BtnAction() {
-    question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
-    question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
-    question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
-    question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
+    question2deactivateButtons();
     document.getElementById("question2answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question2answer1").style.backgroundColor = "DarkGreen";
     document.getElementById("question2answer2").style.backgroundColor = "DarkRed";
@@ -148,10 +187,7 @@ function question2answer2BtnAction() {
 var question2answer3Btn = document.querySelector("#question2answer3");
 question2answer3Btn.addEventListener("click", question2answer3BtnAction);
 function question2answer3BtnAction() {
-    question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
-    question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
-    question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
-    question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
+    question2deactivateButtons();
     document.getElementById("question2answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question2answer1").style.backgroundColor = "DarkGreen";
     document.getElementById("question2answer2").style.backgroundColor = "DarkRed";
@@ -177,10 +213,7 @@ function question2nextBtnAction() {
 var question3answer0Btn = document.querySelector("#question3answer0");
 question3answer0Btn.addEventListener("click", question3answer0BtnAction);
 function question3answer0BtnAction() {
-    question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
-    question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
-    question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
-    question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
+    question3deactivateButtons();
     document.getElementById("question3answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question3answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question3answer2").style.backgroundColor = "DarkGreen";
@@ -193,10 +226,7 @@ function question3answer0BtnAction() {
 var question3answer1Btn = document.querySelector("#question3answer1");
 question3answer1Btn.addEventListener("click", question3answer1BtnAction);
 function question3answer1BtnAction() {
-    question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
-    question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
-    question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
-    question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
+    question3deactivateButtons();
     document.getElementById("question3answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question3answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question3answer2").style.backgroundColor = "DarkGreen";
@@ -209,10 +239,7 @@ function question3answer1BtnAction() {
 var question3answer2Btn = document.querySelector("#question3answer2");
 question3answer2Btn.addEventListener("click", question3answer2BtnAction);
 function question3answer2BtnAction() {
-    question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
-    question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
-    question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
-    question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
+    question3deactivateButtons();
     document.getElementById("question3answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question3answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question3answer2").style.backgroundColor = "DarkGreen";
@@ -225,10 +252,7 @@ function question3answer2BtnAction() {
 var question3answer3Btn = document.querySelector("#question3answer3");
 question3answer3Btn.addEventListener("click", question3answer3BtnAction);
 function question3answer3BtnAction() {
-    question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
-    question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
-    question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
-    question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
+    question3deactivateButtons();
     document.getElementById("question3answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question3answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question3answer2").style.backgroundColor = "DarkGreen";
@@ -254,10 +278,7 @@ function question3nextBtnAction() {
 var question4answer0Btn = document.querySelector("#question4answer0");
 question4answer0Btn.addEventListener("click", question4answer0BtnAction);
 function question4answer0BtnAction() {
-    question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
-    question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
-    question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
-    question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
+    question4deactivateButtons();
     document.getElementById("question4answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question4answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question4answer2").style.backgroundColor = "DarkRed";
@@ -270,10 +291,7 @@ function question4answer0BtnAction() {
 var question4answer1Btn = document.querySelector("#question4answer1");
 question4answer1Btn.addEventListener("click", question4answer1BtnAction);
 function question4answer1BtnAction() {
-    question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
-    question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
-    question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
-    question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
+    question4deactivateButtons();
     document.getElementById("question4answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question4answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question4answer2").style.backgroundColor = "DarkRed";
@@ -286,10 +304,7 @@ function question4answer1BtnAction() {
 var question4answer2Btn = document.querySelector("#question4answer2");
 question4answer2Btn.addEventListener("click", question4answer2BtnAction);
 function question4answer2BtnAction() {
-    question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
-    question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
-    question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
-    question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
+    question4deactivateButtons();
     document.getElementById("question4answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question4answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question4answer2").style.backgroundColor = "DarkRed";
@@ -302,10 +317,7 @@ function question4answer2BtnAction() {
 var question4answer3Btn = document.querySelector("#question4answer3");
 question4answer3Btn.addEventListener("click", question4answer3BtnAction);
 function question4answer3BtnAction() {
-    question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
-    question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
-    question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
-    question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
+    question4deactivateButtons();
     document.getElementById("question4answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question4answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question4answer2").style.backgroundColor = "DarkRed";
@@ -331,10 +343,7 @@ function question4nextBtnAction() {
 var question5answer0Btn = document.querySelector("#question5answer0");
 question5answer0Btn.addEventListener("click", question5answer0BtnAction);
 function question5answer0BtnAction() {
-    question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
-    question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
-    question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
-    question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
+    question5deactivateButtons();
     document.getElementById("question5answer0").style.backgroundColor = "DarkGreen";
     document.getElementById("question5answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question5answer2").style.backgroundColor = "DarkRed";
@@ -347,10 +356,7 @@ function question5answer0BtnAction() {
 var question5answer1Btn = document.querySelector("#question5answer1");
 question5answer1Btn.addEventListener("click", question5answer1BtnAction);
 function question5answer1BtnAction() {
-    question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
-    question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
-    question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
-    question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
+    question5deactivateButtons();
     document.getElementById("question5answer0").style.backgroundColor = "DarkGreen";
     document.getElementById("question5answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question5answer2").style.backgroundColor = "DarkRed";
@@ -363,10 +369,7 @@ function question5answer1BtnAction() {
 var question5answer2Btn = document.querySelector("#question5answer2");
 question5answer2Btn.addEventListener("click", question5answer2BtnAction);
 function question5answer2BtnAction() {
-    question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
-    question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
-    question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
-    question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
+    question5deactivateButtons();
     document.getElementById("question5answer0").style.backgroundColor = "DarkGreen";
     document.getElementById("question5answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question5answer2").style.backgroundColor = "DarkRed";
@@ -379,10 +382,7 @@ function question5answer2BtnAction() {
 var question5answer3Btn = document.querySelector("#question5answer3");
 question5answer3Btn.addEventListener("click", question5answer3BtnAction);
 function question5answer3BtnAction() {
-    question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
-    question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
-    question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
-    question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
+    question5deactivateButtons();
     document.getElementById("question5answer0").style.backgroundColor = "DarkGreen";
     document.getElementById("question5answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question5answer2").style.backgroundColor = "DarkRed";
@@ -408,10 +408,7 @@ function question5nextBtnAction() {
 var question6answer0Btn = document.querySelector("#question6answer0");
 question6answer0Btn.addEventListener("click", question6answer0BtnAction);
 function question6answer0BtnAction() {
-    question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
-    question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
-    question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
-    question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
+    question6deactivateButtons();
     document.getElementById("question6answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question6answer1").style.backgroundColor = "DarkGreen";
     document.getElementById("question6answer2").style.backgroundColor = "DarkRed";
@@ -424,10 +421,7 @@ function question6answer0BtnAction() {
 var question6answer1Btn = document.querySelector("#question6answer1");
 question6answer1Btn.addEventListener("click", question6answer1BtnAction);
 function question6answer1BtnAction() {
-    question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
-    question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
-    question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
-    question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
+    question6deactivateButtons();
     document.getElementById("question6answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question6answer1").style.backgroundColor = "DarkGreen";
     document.getElementById("question6answer2").style.backgroundColor = "DarkRed";
@@ -440,10 +434,7 @@ function question6answer1BtnAction() {
 var question6answer2Btn = document.querySelector("#question6answer2");
 question6answer2Btn.addEventListener("click", question6answer2BtnAction);
 function question6answer2BtnAction() {
-    question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
-    question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
-    question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
-    question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
+    question6deactivateButtons();
     document.getElementById("question6answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question6answer1").style.backgroundColor = "DarkGreen";
     document.getElementById("question6answer2").style.backgroundColor = "DarkRed";
@@ -456,10 +447,7 @@ function question6answer2BtnAction() {
 var question6answer3Btn = document.querySelector("#question6answer3");
 question6answer3Btn.addEventListener("click", question6answer3BtnAction);
 function question6answer3BtnAction() {
-    question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
-    question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
-    question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
-    question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
+    question6deactivateButtons();
     document.getElementById("question6answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question6answer1").style.backgroundColor = "DarkGreen";
     document.getElementById("question6answer2").style.backgroundColor = "DarkRed";
@@ -485,10 +473,7 @@ function question6nextBtnAction() {
 var question7answer0Btn = document.querySelector("#question7answer0");
 question7answer0Btn.addEventListener("click", question7answer0BtnAction);
 function question7answer0BtnAction() {
-    question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
-    question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
-    question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
-    question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
+    question7deactivateButtons();
     document.getElementById("question7answer0").style.backgroundColor = "DarkGreen";
     document.getElementById("question7answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question7answer2").style.backgroundColor = "DarkRed";
@@ -501,10 +486,7 @@ function question7answer0BtnAction() {
 var question7answer1Btn = document.querySelector("#question7answer1");
 question7answer1Btn.addEventListener("click", question7answer1BtnAction);
 function question7answer1BtnAction() {
-    question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
-    question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
-    question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
-    question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
+    question7deactivateButtons();
     document.getElementById("question7answer0").style.backgroundColor = "DarkGreen";
     document.getElementById("question7answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question7answer2").style.backgroundColor = "DarkRed";
@@ -517,10 +499,7 @@ function question7answer1BtnAction() {
 var question7answer2Btn = document.querySelector("#question7answer2");
 question7answer2Btn.addEventListener("click", question7answer2BtnAction);
 function question7answer2BtnAction() {
-    question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
-    question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
-    question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
-    question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
+    question7deactivateButtons();
     document.getElementById("question7answer0").style.backgroundColor = "DarkGreen";
     document.getElementById("question7answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question7answer2").style.backgroundColor = "DarkRed";
@@ -533,10 +512,7 @@ function question7answer2BtnAction() {
 var question7answer3Btn = document.querySelector("#question7answer3");
 question7answer3Btn.addEventListener("click", question7answer3BtnAction);
 function question7answer3BtnAction() {
-    question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
-    question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
-    question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
-    question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
+    question7deactivateButtons();
     document.getElementById("question7answer0").style.backgroundColor = "DarkGreen";
     document.getElementById("question7answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question7answer2").style.backgroundColor = "DarkRed";
@@ -562,10 +538,7 @@ function question7nextBtnAction() {
 var question8answer0Btn = document.querySelector("#question8answer0");
 question8answer0Btn.addEventListener("click", question8answer0BtnAction);
 function question8answer0BtnAction() {
-    question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
-    question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
-    question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
-    question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
+    question8deactivateButtons();
     document.getElementById("question8answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question8answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question8answer2").style.backgroundColor = "DarkRed";
@@ -578,10 +551,7 @@ function question8answer0BtnAction() {
 var question8answer1Btn = document.querySelector("#question8answer1");
 question8answer1Btn.addEventListener("click", question8answer1BtnAction);
 function question8answer1BtnAction() {
-    question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
-    question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
-    question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
-    question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
+    question8deactivateButtons();
     document.getElementById("question8answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question8answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question8answer2").style.backgroundColor = "DarkRed";
@@ -594,10 +564,7 @@ function question8answer1BtnAction() {
 var question8answer2Btn = document.querySelector("#question8answer2");
 question8answer2Btn.addEventListener("click", question8answer2BtnAction);
 function question8answer2BtnAction() {
-    question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
-    question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
-    question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
-    question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
+    question8deactivateButtons();
     document.getElementById("question8answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question8answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question8answer2").style.backgroundColor = "DarkRed";
@@ -610,10 +577,7 @@ function question8answer2BtnAction() {
 var question8answer3Btn = document.querySelector("#question8answer3");
 question8answer3Btn.addEventListener("click", question8answer3BtnAction);
 function question8answer3BtnAction() {
-    question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
-    question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
-    question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
-    question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
+    question8deactivateButtons();
     document.getElementById("question8answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question8answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question8answer2").style.backgroundColor = "DarkRed";
@@ -639,10 +603,7 @@ function question8nextBtnAction() {
 var question9answer0Btn = document.querySelector("#question9answer0");
 question9answer0Btn.addEventListener("click", question9answer0BtnAction);
 function question9answer0BtnAction() {
-    question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
-    question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
-    question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
-    question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
+    question9deactivateButtons();
     document.getElementById("question9answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question9answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question9answer2").style.backgroundColor = "DarkRed";
@@ -655,10 +616,7 @@ function question9answer0BtnAction() {
 var question9answer1Btn = document.querySelector("#question9answer1");
 question9answer1Btn.addEventListener("click", question9answer1BtnAction);
 function question9answer1BtnAction() {
-    question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
-    question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
-    question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
-    question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
+    question9deactivateButtons();
     document.getElementById("question9answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question9answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question9answer2").style.backgroundColor = "DarkRed";
@@ -671,10 +629,7 @@ function question9answer1BtnAction() {
 var question9answer2Btn = document.querySelector("#question9answer2");
 question9answer2Btn.addEventListener("click", question9answer2BtnAction);
 function question9answer2BtnAction() {
-    question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
-    question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
-    question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
-    question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
+    question9deactivateButtons();
     document.getElementById("question9answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question9answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question9answer2").style.backgroundColor = "DarkRed";
@@ -687,10 +642,7 @@ function question9answer2BtnAction() {
 var question9answer3Btn = document.querySelector("#question9answer3");
 question9answer3Btn.addEventListener("click", question9answer3BtnAction);
 function question9answer3BtnAction() {
-    question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
-    question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
-    question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
-    question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
+    question9deactivateButtons();
     document.getElementById("question9answer0").style.backgroundColor = "DarkRed";
     document.getElementById("question9answer1").style.backgroundColor = "DarkRed";
     document.getElementById("question9answer2").style.backgroundColor = "DarkRed";
@@ -731,6 +683,79 @@ var resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener("click", resetBtnAction);
 function resetBtnAction() {
     //////// NEEDS TO ADD CODE TO ACTUALLY RESET ////////
+    question1answer0Btn.addEventListener("click", question1answer0BtnAction);
+    question1answer1Btn.addEventListener("click", question1answer1BtnAction);
+    question1answer2Btn.addEventListener("click", question1answer2BtnAction);
+    question1answer3Btn.addEventListener("click", question1answer3BtnAction);
+    document.getElementById("question1answer0").style.backgroundColor = "DarkBlue";
+    document.getElementById("question1answer1").style.backgroundColor = "DarkBlue";
+    document.getElementById("question1answer2").style.backgroundColor = "DarkBlue";
+    document.getElementById("question1answer3").style.backgroundColor = "DarkBlue";
+    question2answer0Btn.addEventListener("click", question2answer0BtnAction);
+    question2answer1Btn.addEventListener("click", question2answer1BtnAction);
+    question2answer2Btn.addEventListener("click", question2answer2BtnAction);
+    question2answer3Btn.addEventListener("click", question2answer3BtnAction);
+    document.getElementById("question2answer0").style.backgroundColor = "DarkBlue";
+    document.getElementById("question2answer1").style.backgroundColor = "DarkBlue";
+    document.getElementById("question2answer2").style.backgroundColor = "DarkBlue";
+    document.getElementById("question2answer3").style.backgroundColor = "DarkBlue";
+    question3answer0Btn.addEventListener("click", question3answer0BtnAction);
+    question3answer1Btn.addEventListener("click", question3answer1BtnAction);
+    question3answer2Btn.addEventListener("click", question3answer2BtnAction);
+    question3answer3Btn.addEventListener("click", question3answer3BtnAction);
+    document.getElementById("question3answer0").style.backgroundColor = "DarkBlue";
+    document.getElementById("question3answer1").style.backgroundColor = "DarkBlue";
+    document.getElementById("question3answer2").style.backgroundColor = "DarkBlue";
+    document.getElementById("question3answer3").style.backgroundColor = "DarkBlue";
+    question4answer0Btn.addEventListener("click", question4answer0BtnAction);
+    question4answer1Btn.addEventListener("click", question4answer1BtnAction);
+    question4answer2Btn.addEventListener("click", question4answer2BtnAction);
+    question4answer3Btn.addEventListener("click", question4answer3BtnAction);
+    document.getElementById("question4answer0").style.backgroundColor = "DarkBlue";
+    document.getElementById("question4answer1").style.backgroundColor = "DarkBlue";
+    document.getElementById("question4answer2").style.backgroundColor = "DarkBlue";
+    document.getElementById("question4answer3").style.backgroundColor = "DarkBlue";
+    question5answer0Btn.addEventListener("click", question5answer0BtnAction);
+    question5answer1Btn.addEventListener("click", question5answer1BtnAction);
+    question5answer2Btn.addEventListener("click", question5answer2BtnAction);
+    question5answer3Btn.addEventListener("click", question5answer3BtnAction);
+    document.getElementById("question5answer0").style.backgroundColor = "DarkBlue";
+    document.getElementById("question5answer1").style.backgroundColor = "DarkBlue";
+    document.getElementById("question5answer2").style.backgroundColor = "DarkBlue";
+    document.getElementById("question5answer3").style.backgroundColor = "DarkBlue";
+    question6answer0Btn.addEventListener("click", question6answer0BtnAction);
+    question6answer1Btn.addEventListener("click", question6answer1BtnAction);
+    question6answer2Btn.addEventListener("click", question6answer2BtnAction);
+    question6answer3Btn.addEventListener("click", question6answer3BtnAction);
+    document.getElementById("question6answer0").style.backgroundColor = "DarkBlue";
+    document.getElementById("question6answer1").style.backgroundColor = "DarkBlue";
+    document.getElementById("question6answer2").style.backgroundColor = "DarkBlue";
+    document.getElementById("question6answer3").style.backgroundColor = "DarkBlue";
+    question7answer0Btn.addEventListener("click", question7answer0BtnAction);
+    question7answer1Btn.addEventListener("click", question7answer1BtnAction);
+    question7answer2Btn.addEventListener("click", question7answer2BtnAction);
+    question7answer3Btn.addEventListener("click", question7answer3BtnAction);
+    document.getElementById("question7answer0").style.backgroundColor = "DarkBlue";
+    document.getElementById("question7answer1").style.backgroundColor = "DarkBlue";
+    document.getElementById("question7answer2").style.backgroundColor = "DarkBlue";
+    document.getElementById("question7answer3").style.backgroundColor = "DarkBlue";
+    question8answer0Btn.addEventListener("click", question8answer0BtnAction);
+    question8answer1Btn.addEventListener("click", question8answer1BtnAction);
+    question8answer2Btn.addEventListener("click", question8answer2BtnAction);
+    question8answer3Btn.addEventListener("click", question8answer3BtnAction);
+    document.getElementById("question8answer0").style.backgroundColor = "DarkBlue";
+    document.getElementById("question8answer1").style.backgroundColor = "DarkBlue";
+    document.getElementById("question8answer2").style.backgroundColor = "DarkBlue";
+    document.getElementById("question8answer3").style.backgroundColor = "DarkBlue";
+    question9answer0Btn.addEventListener("click", question9answer0BtnAction);
+    question9answer1Btn.addEventListener("click", question9answer1BtnAction);
+    question9answer2Btn.addEventListener("click", question9answer2BtnAction);
+    question9answer3Btn.addEventListener("click", question9answer3BtnAction);
+    document.getElementById("question9answer0").style.backgroundColor = "DarkBlue";
+    document.getElementById("question9answer1").style.backgroundColor = "DarkBlue";
+    document.getElementById("question9answer2").style.backgroundColor = "DarkBlue";
+    document.getElementById("question9answer3").style.backgroundColor = "DarkBlue";
+    /////////////////////////////////////////////////////
     document.getElementById("highscores").style.display = "none";
     document.getElementById("question0").style.display = "block";
 }
