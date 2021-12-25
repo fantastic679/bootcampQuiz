@@ -13,6 +13,7 @@ question0answer0Btn.addEventListener("click", question0answer0BtnAction);
 function question0answer0BtnAction() {
     document.getElementById("question0").style.display = "none";
     document.getElementById("question1").style.display = "block";
+    currentScore = 0;
     countdown();
 }
 
@@ -112,6 +113,7 @@ function question1answer2BtnAction() {
     document.getElementById("question1answer3").style.backgroundColor = "DarkRed";
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question1next").style.display = "block";
+    currentScore++;
 }
 
 // question1answer3 button
@@ -164,6 +166,7 @@ function question2answer1BtnAction() {
     document.getElementById("question2answer3").style.backgroundColor = "DarkRed";
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question2next").style.display = "block";
+    currentScore++;
 }
 
 // question2answer2 button
@@ -242,6 +245,7 @@ function question3answer2BtnAction() {
     document.getElementById("question3answer3").style.backgroundColor = "DarkRed";
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question3next").style.display = "block";
+    currentScore++;
 }
 
 // question3answer3 button
@@ -320,6 +324,7 @@ function question4answer3BtnAction() {
     document.getElementById("question4answer3").style.backgroundColor = "DarkGreen";
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question4next").style.display = "block";
+    currentScore++;
 }
 
 var question4nextBtn = document.querySelector("#question4next");
@@ -346,6 +351,7 @@ function question5answer0BtnAction() {
     document.getElementById("question5answer3").style.backgroundColor = "DarkRed";
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question5next").style.display = "block";
+    currentScore++;
 }
 
 // question5answer1 button
@@ -424,6 +430,7 @@ function question6answer1BtnAction() {
     document.getElementById("question6answer3").style.backgroundColor = "DarkRed";
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question6next").style.display = "block";
+    currentScore++;
 }
 
 // question6answer2 button
@@ -476,6 +483,7 @@ function question7answer0BtnAction() {
     document.getElementById("question7answer3").style.backgroundColor = "DarkRed";
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question7next").style.display = "block";
+    currentScore++;
 }
 
 // question7answer1 button
@@ -580,6 +588,7 @@ function question8answer3BtnAction() {
     document.getElementById("question8answer3").style.backgroundColor = "DarkGreen";
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question8next").style.display = "block";
+    currentScore++;
 }
 
 var question8nextBtn = document.querySelector("#question8next");
@@ -606,6 +615,7 @@ function question9answer0BtnAction() {
     document.getElementById("question9answer3").style.backgroundColor = "DarkGreen";
     document.getElementById("feedbackText").innerText = "Incorrect!";
     document.getElementById("summarynext").style.display = "block";
+    clearInterval(timeInterval);
 }
 
 // question9answer1 button
@@ -633,6 +643,7 @@ function question9answer2BtnAction() {
     document.getElementById("question9answer3").style.backgroundColor = "DarkGreen";
     document.getElementById("feedbackText").innerText = "Incorrect!";
     document.getElementById("summarynext").style.display = "block";
+    clearInterval(timeInterval);
 }
 
 // question9answer3 button
@@ -646,6 +657,8 @@ function question9answer3BtnAction() {
     document.getElementById("question9answer3").style.backgroundColor = "DarkGreen";
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("summarynext").style.display = "block";
+    clearInterval(timeInterval);
+    currentScore++;
 }
 
 // summary button
@@ -664,6 +677,16 @@ function summarynextBtnAction() {
     document.getElementById("question8").style.display = "none";
     document.getElementById("question9").style.display = "none";
     document.getElementById("title").textContent = "Bootcamp Quiz"
+    if (currentScore === 1) {
+        document.getElementById("summaryStatement").textContent = "You answered 1 question correctly";
+    } else {
+        document.getElementById("summaryStatement").textContent = "You answered " + currentScore + " questions correctly";
+    }
+    if (timeLeft === 1) {
+        document.getElementById("summaryStatement").textContent += " with 1 second remaining.";
+    } else {
+        document.getElementById("summaryStatement").textContent += " with " + timeLeft + " seconds remaining.";
+    }
     document.getElementById("summary").style.display = "block";
     document.getElementById("initials").focus();
 }
@@ -690,7 +713,18 @@ function submitBtnAction() {
     var initialsInput = document.querySelector("#initials");
     var highscoresList = document.getElementById("highscoresList");
     var newHighscore = document.createElement("li");
-    newHighscore.appendChild(document.createTextNode(initialsInput.value));
+    var newHighscoreEntry;
+    if (currentScore === 1) {
+        newHighscoreEntry = '"' + initialsInput.value + '" answered 1 question correctly';
+    } else {
+        newHighscoreEntry = '"' + initialsInput.value + '" answered ' + currentScore + ' questions correctly';
+    }
+    if (timeLeft === 1) {
+        newHighscoreEntry += " with 1 second remaining.";
+    } else {
+        newHighscoreEntry += " with " + timeLeft + " seconds remaining.";
+    }
+    newHighscore.appendChild(document.createTextNode(newHighscoreEntry));
     highscoresList.appendChild(newHighscore);
     //////////////////////////////////////////////////////
     document.getElementById("summary").style.display = "none";
@@ -705,7 +739,7 @@ function submitBtnAction() {
 var resetBtn = document.querySelector("#reset");
 resetBtn.addEventListener("click", resetBtnAction);
 function resetBtnAction() {
-    //////// NEEDS TO ADD CODE TO ACTUALLY RESET ////////
+    //////// NEEDS TO ADD CODE TO ACTUALLY RESET //////// <-- this can actually be coded also into the start quiz button...
     question1answer0Btn.addEventListener("click", question1answer0BtnAction);
     question1answer1Btn.addEventListener("click", question1answer1BtnAction);
     question1answer2Btn.addEventListener("click", question1answer2BtnAction);
@@ -783,13 +817,13 @@ function resetBtnAction() {
     document.getElementById("question0").style.display = "block";
 }
 
+// ==============================================================================================
+// Timer
+// ==============================================================================================
 
-
-
-
-// Timer that counts down from 60 seconds
 var timeInterval;
 const quizTime = 60;
+var timeLeft = quizTime;
 function countdownSecond() {
     if (timeLeft === 1) {
         document.getElementById("title").textContent = timeLeft + " second";
@@ -813,9 +847,15 @@ function countdownSecond() {
         document.getElementById("summarynext").style.display = "block";
   }
 }
+
 function countdown() {
     timeLeft = quizTime;
     countdownSecond();
-    // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
     timeInterval = setInterval(countdownSecond, 1000);
-  }
+}
+
+// ==============================================================================================
+// Score keeping
+// ==============================================================================================
+
+var currentScore = 0;
