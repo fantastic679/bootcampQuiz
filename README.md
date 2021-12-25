@@ -16,7 +16,7 @@ The website features a homepage that introduces the user and allows them to star
 
 ![Welcome](/assets/screenshots/screenshot1.png?raw=true)
 
-Once the quiz is started, a countdown timer is displayed that will end the quiz once the time remaining elapses. The other condition for ending the quiz is the completion of all 9 questions. Terminating the quiz will prompt the user to view the summary.
+Once the quiz is started, a countdown timer is displayed. If a question is answered incorrectly, 10 seconds will be subtracted from the time remaiming. The quiz end once the time remaining elapses or all 9 questions are completed. Completing the quiz will prompt the user to view the summary.
 
 ![Question](/assets/screenshots/screenshot2.png?raw=true)
 
