@@ -34,6 +34,8 @@ The highscores page displays the summary information for previous runs of the qu
 
 The website functionality and content is provided on a single HTML page. The CSS ensure the page does not display the majority of this information initially so that users are only shown a landing page in the first instance. JavaScript is used determine which portions of the page are displayed depending on user input, as well as provide the timer functionality.
 
+The page is designed to be able to be navigated using the keyboard alone using the enter key and tab/shift-tab to switch between the different multiple choice options.
+
 ## Contact
 
 Do not hesitate to contact me at stevenphan@msn.com if you have any questions or concerns.

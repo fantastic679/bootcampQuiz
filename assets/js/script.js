@@ -34,6 +34,7 @@ function countdownSecond() {
         clearInterval(timeInterval);
         document.getElementById("feedbackText").innerText = "Time's up!";
         document.getElementById("summarynext").style.display = "block";
+        document.getElementById("summarynext").focus();
   }
 }
 
@@ -48,6 +49,11 @@ function countdown() {
 // ==============================================================================================
 
 var currentScore = 0;
+
+// ==============================================================================================
+// Focus on Start Quiz button by default
+// ==============================================================================================
+document.getElementById("question0answer0").focus();
 
 // ==============================================================================================
 // QUESTION NUMBERING STARTS AT 0
@@ -65,6 +71,7 @@ function question0answer0BtnAction() {
     document.getElementById("question1").style.display = "block";
     currentScore = 0;
     countdown();
+    document.getElementById("question1answer0").focus();
 }
 
 // ==============================================================================================
@@ -87,6 +94,7 @@ function question1answer0BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question1next").focus();
 }
 
 // question1answer1 button
@@ -105,6 +113,7 @@ function question1answer1BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question1next").focus();
 }
 
 // question1answer2 button
@@ -119,6 +128,7 @@ function question1answer2BtnAction() {
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question1next").style.display = "block";
     currentScore++;
+    document.getElementById("question1next").focus();
 }
 
 // question1answer3 button
@@ -137,6 +147,7 @@ function question1answer3BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question1next").focus();
 }
 
 var question1nextBtn = document.getElementById("question1next");
@@ -146,6 +157,7 @@ function question1nextBtnAction() {
     document.getElementById("question1next").style.display = "none";
     document.getElementById("question1").style.display = "none";
     document.getElementById("question2").style.display = "block";
+    document.getElementById("question2answer0").focus();
 }
 
 // ==============================================================================================
@@ -168,6 +180,7 @@ function question2answer0BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question2next").focus();
 }
 
 // question2answer1 button
@@ -182,6 +195,7 @@ function question2answer1BtnAction() {
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question2next").style.display = "block";
     currentScore++;
+    document.getElementById("question2next").focus();
 }
 
 // question2answer2 button
@@ -200,6 +214,7 @@ function question2answer2BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question2next").focus();
 }
 
 // question2answer3 button
@@ -218,6 +233,7 @@ function question2answer3BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question2next").focus();
 }
 
 var question2nextBtn = document.getElementById("question2next");
@@ -227,6 +243,7 @@ function question2nextBtnAction() {
     document.getElementById("question2next").style.display = "none";
     document.getElementById("question2").style.display = "none";
     document.getElementById("question3").style.display = "block";
+    document.getElementById("question3answer0").focus();
 }
 
 // ==============================================================================================
@@ -249,6 +266,7 @@ function question3answer0BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question3next").focus();
 }
 
 // question3answer1 button
@@ -267,6 +285,7 @@ function question3answer1BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question3next").focus();
 }
 
 // question3answer2 button
@@ -281,6 +300,7 @@ function question3answer2BtnAction() {
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question3next").style.display = "block";
     currentScore++;
+    document.getElementById("question3next").focus();
 }
 
 // question3answer3 button
@@ -299,6 +319,7 @@ function question3answer3BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question3next").focus();
 }
 
 var question3nextBtn = document.getElementById("question3next");
@@ -308,6 +329,7 @@ function question3nextBtnAction() {
     document.getElementById("question3next").style.display = "none";
     document.getElementById("question3").style.display = "none";
     document.getElementById("question4").style.display = "block";
+    document.getElementById("question4answer0").focus();
 }
 
 // ==============================================================================================
@@ -330,6 +352,7 @@ function question4answer0BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question4next").focus();
 }
 
 // question4answer1 button
@@ -348,6 +371,7 @@ function question4answer1BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question4next").focus();
 }
 
 // question4answer2 button
@@ -366,6 +390,7 @@ function question4answer2BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question4next").focus();
 }
 
 // question4answer3 button
@@ -380,6 +405,7 @@ function question4answer3BtnAction() {
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question4next").style.display = "block";
     currentScore++;
+    document.getElementById("question4next").focus();
 }
 
 var question4nextBtn = document.getElementById("question4next");
@@ -389,6 +415,7 @@ function question4nextBtnAction() {
     document.getElementById("question4next").style.display = "none";
     document.getElementById("question4").style.display = "none";
     document.getElementById("question5").style.display = "block";
+    document.getElementById("question5answer0").focus();
 }
 
 // ==============================================================================================
@@ -407,6 +434,7 @@ function question5answer0BtnAction() {
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question5next").style.display = "block";
     currentScore++;
+    document.getElementById("question5next").focus();
 }
 
 // question5answer1 button
@@ -425,6 +453,7 @@ function question5answer1BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question5next").focus();
 }
 
 // question5answer2 button
@@ -443,6 +472,7 @@ function question5answer2BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question5next").focus();
 }
 
 // question5answer3 button
@@ -461,6 +491,7 @@ function question5answer3BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question5next").focus();
 }
 
 var question5nextBtn = document.getElementById("question5next");
@@ -470,6 +501,7 @@ function question5nextBtnAction() {
     document.getElementById("question5next").style.display = "none";
     document.getElementById("question5").style.display = "none";
     document.getElementById("question6").style.display = "block";
+    document.getElementById("question6answer0").focus();
 }
 
 // ==============================================================================================
@@ -492,6 +524,7 @@ function question6answer0BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question6next").focus();
 }
 
 // question6answer1 button
@@ -506,6 +539,7 @@ function question6answer1BtnAction() {
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question6next").style.display = "block";
     currentScore++;
+    document.getElementById("question6next").focus();
 }
 
 // question6answer2 button
@@ -524,6 +558,7 @@ function question6answer2BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question6next").focus();
 }
 
 // question6answer3 button
@@ -542,6 +577,7 @@ function question6answer3BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question6next").focus();
 }
 
 var question6nextBtn = document.getElementById("question6next");
@@ -551,6 +587,7 @@ function question6nextBtnAction() {
     document.getElementById("question6next").style.display = "none";
     document.getElementById("question6").style.display = "none";
     document.getElementById("question7").style.display = "block";
+    document.getElementById("question7answer0").focus();
 }
 
 // ==============================================================================================
@@ -569,6 +606,7 @@ function question7answer0BtnAction() {
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question7next").style.display = "block";
     currentScore++;
+    document.getElementById("question7next").focus();
 }
 
 // question7answer1 button
@@ -587,6 +625,7 @@ function question7answer1BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question7next").focus();
 }
 
 // question7answer2 button
@@ -605,6 +644,7 @@ function question7answer2BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question7next").focus();
 }
 
 // question7answer3 button
@@ -623,6 +663,7 @@ function question7answer3BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question7next").focus();
 }
 
 var question7nextBtn = document.getElementById("question7next");
@@ -632,6 +673,7 @@ function question7nextBtnAction() {
     document.getElementById("question7next").style.display = "none";
     document.getElementById("question7").style.display = "none";
     document.getElementById("question8").style.display = "block";
+    document.getElementById("question8answer0").focus();
 }
 
 // ==============================================================================================
@@ -654,6 +696,7 @@ function question8answer0BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question8next").focus();
 }
 
 // question8answer1 button
@@ -672,6 +715,7 @@ function question8answer1BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question8next").focus();
 }
 
 // question8answer2 button
@@ -690,6 +734,7 @@ function question8answer2BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("question8next").focus();
 }
 
 // question8answer3 button
@@ -704,6 +749,7 @@ function question8answer3BtnAction() {
     document.getElementById("feedbackText").innerText = "Correct!";
     document.getElementById("question8next").style.display = "block";
     currentScore++;
+    document.getElementById("question8next").focus();
 }
 
 var question8nextBtn = document.getElementById("question8next");
@@ -713,6 +759,7 @@ function question8nextBtnAction() {
     document.getElementById("question8next").style.display = "none";
     document.getElementById("question8").style.display = "none";
     document.getElementById("question9").style.display = "block";
+    document.getElementById("question9answer0").focus();
 }
 
 // ==============================================================================================
@@ -736,6 +783,7 @@ function question9answer0BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("summarynext").focus();
 }
 
 // question9answer1 button
@@ -755,6 +803,7 @@ function question9answer1BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("summarynext").focus();
 }
 
 // question9answer2 button
@@ -774,6 +823,7 @@ function question9answer2BtnAction() {
     } else {
         timeLeft = 0;
     }
+    document.getElementById("summarynext").focus();
 }
 
 // question9answer3 button
@@ -789,6 +839,7 @@ function question9answer3BtnAction() {
     document.getElementById("summarynext").style.display = "block";
     clearInterval(timeInterval);
     currentScore++;
+    document.getElementById("summarynext").focus();
 }
 
 // summary button
@@ -830,11 +881,9 @@ var submitBtn = document.getElementById("submit");
 submitBtn.addEventListener("click", submitBtnAction);
 
 // or hitting enter on the text field
-document.getElementById("initials")
-    .addEventListener("keyup", function(event) {
-    event.preventDefault();
+document.getElementById("initials").addEventListener("keydown", function(event) {
     if (event.keyCode === 13) {
-        document.getElementById("submit").click();
+        document.getElementById("submit").focus();
     }
 });
 
@@ -857,6 +906,7 @@ function submitBtnAction() {
     highscoresList.appendChild(newHighscore);
     document.getElementById("summary").style.display = "none";
     document.getElementById("highscores").style.display = "block";
+    document.getElementById("reset").focus();
 }
 
 // ==============================================================================================
@@ -867,7 +917,7 @@ function submitBtnAction() {
 var resetBtn = document.getElementById("reset");
 resetBtn.addEventListener("click", resetBtnAction);
 function resetBtnAction() {
-    // re-active all multiple choice buttons
+    // re-activate all multiple choice buttons
     question1answer0Btn.addEventListener("click", question1answer0BtnAction);
     question1answer1Btn.addEventListener("click", question1answer1BtnAction);
     question1answer2Btn.addEventListener("click", question1answer2BtnAction);
@@ -943,6 +993,7 @@ function resetBtnAction() {
     // reset highscores and show welcome page (i.e. question 0)
     document.getElementById("highscores").style.display = "none";
     document.getElementById("question0").style.display = "block";
+    document.getElementById("question0answer0").focus();
 }
 
 // ==============================================================================================
