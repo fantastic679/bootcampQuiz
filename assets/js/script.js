@@ -13,6 +13,7 @@ question0answer0Btn.addEventListener("click", question0answer0BtnAction);
 function question0answer0BtnAction() {
     document.getElementById("question0").style.display = "none";
     document.getElementById("question1").style.display = "block";
+    countdown();
 }
 
 function question1deactivateButtons() {
@@ -771,3 +772,28 @@ function resetBtnAction() {
     document.getElementById("highscores").style.display = "none";
     document.getElementById("question0").style.display = "block";
 }
+
+
+
+
+
+// Timer that counts down from 60 seconds
+function countdown() {
+    var timeLeft = 60;
+  
+    // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
+    var timeInterval = setInterval(function () {
+        if (timeLeft > 0) {
+            document.getElementById("title").textContent = timeLeft + " seconds";
+            timeLeft--;
+      } else if (timeLeft === 1) {
+            document.getElementById("title").textContent = timeLeft + " second";
+            timeLeft--;
+      } else {
+            document.getElementById("title").textContent = "Time's up";
+            clearInterval(timeInterval);
+            // code to hide all questions, then show the results page
+            //////////////////////////////////////////////////
+      }
+    }, 1000);
+  }
