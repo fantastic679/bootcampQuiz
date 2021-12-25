@@ -740,6 +740,11 @@ function question9answer0BtnAction() {
     document.getElementById("feedbackText").innerText = "Incorrect!";
     document.getElementById("summarynext").style.display = "block";
     clearInterval(timeInterval);
+    if (timeLeft >= 10) {
+        timeLeft = timeLeft - 10;
+    } else {
+        timeLeft = 0;
+    }
 }
 
 // question9answer1 button
@@ -754,6 +759,11 @@ function question9answer1BtnAction() {
     document.getElementById("feedbackText").innerText = "Incorrect!";
     document.getElementById("summarynext").style.display = "block";
     clearInterval(timeInterval);
+    if (timeLeft >= 10) {
+        timeLeft = timeLeft - 10;
+    } else {
+        timeLeft = 0;
+    }
 }
 
 // question9answer2 button
@@ -768,6 +778,11 @@ function question9answer2BtnAction() {
     document.getElementById("feedbackText").innerText = "Incorrect!";
     document.getElementById("summarynext").style.display = "block";
     clearInterval(timeInterval);
+    if (timeLeft >= 10) {
+        timeLeft = timeLeft - 10;
+    } else {
+        timeLeft = 0;
+    }
 }
 
 // question9answer3 button
@@ -807,9 +822,9 @@ function summarynextBtnAction() {
         document.getElementById("summaryStatement").textContent = "You answered " + currentScore + " questions correctly";
     }
     if (timeLeft === 1) {
-        document.getElementById("summaryStatement").textContent += " with 1 second remaining";
+        document.getElementById("summaryStatement").textContent += " with 1 second remaining.";
     } else {
-        document.getElementById("summaryStatement").textContent += " with " + timeLeft + " seconds remaining";
+        document.getElementById("summaryStatement").textContent += " with " + timeLeft + " seconds remaining.";
     }
     document.getElementById("summary").style.display = "block";
     document.getElementById("initials").focus();
