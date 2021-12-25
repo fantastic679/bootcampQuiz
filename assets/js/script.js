@@ -619,6 +619,7 @@ function question9answer1BtnAction() {
     document.getElementById("question9answer3").style.backgroundColor = "DarkGreen";
     document.getElementById("feedbackText").innerText = "Incorrect!";
     document.getElementById("summarynext").style.display = "block";
+    clearInterval(timeInterval);
 }
 
 // question9answer2 button
@@ -653,7 +654,16 @@ summarynextBtn.addEventListener("click", summarynextBtnAction);
 function summarynextBtnAction() {
     document.getElementById("feedbackText").innerText = "";
     document.getElementById("summarynext").style.display = "none";
+    document.getElementById("question1").style.display = "none";
+    document.getElementById("question2").style.display = "none";
+    document.getElementById("question3").style.display = "none";
+    document.getElementById("question4").style.display = "none";
+    document.getElementById("question5").style.display = "none";
+    document.getElementById("question6").style.display = "none";
+    document.getElementById("question7").style.display = "none";
+    document.getElementById("question8").style.display = "none";
     document.getElementById("question9").style.display = "none";
+    document.getElementById("title").textContent = "Bootcamp Quiz"
     document.getElementById("summary").style.display = "block";
     document.getElementById("initials").focus();
 }
@@ -778,22 +788,34 @@ function resetBtnAction() {
 
 
 // Timer that counts down from 60 seconds
+var timeInterval;
+const quizTime = 60;
+function countdownSecond() {
+    if (timeLeft === 1) {
+        document.getElementById("title").textContent = timeLeft + " second";
+        timeLeft--;
+    } else if (timeLeft > 0) {
+        document.getElementById("title").textContent = timeLeft + " seconds";
+        timeLeft--;
+    } else {
+        document.getElementById("title").textContent = "0 seconds";
+        question1deactivateButtons();
+        question2deactivateButtons();
+        question3deactivateButtons();
+        question4deactivateButtons();
+        question5deactivateButtons();
+        question6deactivateButtons();
+        question7deactivateButtons();
+        question8deactivateButtons();
+        question9deactivateButtons();
+        clearInterval(timeInterval);
+        document.getElementById("feedbackText").innerText = "Time's up!";
+        document.getElementById("summarynext").style.display = "block";
+  }
+}
 function countdown() {
-    var timeLeft = 60;
-  
+    timeLeft = quizTime;
+    countdownSecond();
     // Use the `setInterval()` method to call a function to be executed every 1000 milliseconds
-    var timeInterval = setInterval(function () {
-        if (timeLeft > 0) {
-            document.getElementById("title").textContent = timeLeft + " seconds";
-            timeLeft--;
-      } else if (timeLeft === 1) {
-            document.getElementById("title").textContent = timeLeft + " second";
-            timeLeft--;
-      } else {
-            document.getElementById("title").textContent = "Time's up";
-            clearInterval(timeInterval);
-            // code to hide all questions, then show the results page
-            //////////////////////////////////////////////////
-      }
-    }, 1000);
+    timeInterval = setInterval(countdownSecond, 1000);
   }
