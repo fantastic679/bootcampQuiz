@@ -1,14 +1,64 @@
 // ==============================================================================================
-// NUMBERING STARTS AT 0
+// Timer
 // ==============================================================================================
 
+var timeInterval;
+const quizTime = 60;
+var timeLeft = quizTime;
+function countdownSecond() {
+    if (timeLeft === 1) {
+        document.getElementById("title").textContent = timeLeft + " second";
+        timeLeft--;
+    } else if (timeLeft > 0) {
+        document.getElementById("title").textContent = timeLeft + " seconds";
+        timeLeft--;
+    } else {
+        document.getElementById("title").textContent = "0 seconds";
+        question1deactivateButtons();
+        question2deactivateButtons();
+        question3deactivateButtons();
+        question4deactivateButtons();
+        question5deactivateButtons();
+        question6deactivateButtons();
+        question7deactivateButtons();
+        question8deactivateButtons();
+        question9deactivateButtons();
+        document.getElementById("question1next").style.display = "none";
+        document.getElementById("question2next").style.display = "none";
+        document.getElementById("question3next").style.display = "none";
+        document.getElementById("question4next").style.display = "none";
+        document.getElementById("question5next").style.display = "none";
+        document.getElementById("question6next").style.display = "none";
+        document.getElementById("question7next").style.display = "none";
+        document.getElementById("question8next").style.display = "none";
+        clearInterval(timeInterval);
+        document.getElementById("feedbackText").innerText = "Time's up!";
+        document.getElementById("summarynext").style.display = "block";
+  }
+}
+
+function countdown() {
+    timeLeft = quizTime;
+    countdownSecond();
+    timeInterval = setInterval(countdownSecond, 1000);
+}
+
+// ==============================================================================================
+// Score keeping
+// ==============================================================================================
+
+var currentScore = 0;
+
+// ==============================================================================================
+// QUESTION NUMBERING STARTS AT 0
+// ==============================================================================================
 
 // ==============================================================================================
 // QUESTION 0 is the start quiz page
 // ==============================================================================================
 
 // start quiz button
-var question0answer0Btn = document.querySelector("#question0answer0");
+var question0answer0Btn = document.getElementById("question0answer0");
 question0answer0Btn.addEventListener("click", question0answer0BtnAction);
 function question0answer0BtnAction() {
     document.getElementById("question0").style.display = "none";
@@ -18,70 +68,11 @@ function question0answer0BtnAction() {
 }
 
 // ==============================================================================================
-// Deactivate multiple choice buttons
-// ==============================================================================================
-
-function question1deactivateButtons() {
-    question1answer0Btn.removeEventListener("click", question1answer0BtnAction);
-    question1answer1Btn.removeEventListener("click", question1answer1BtnAction);
-    question1answer2Btn.removeEventListener("click", question1answer2BtnAction);
-    question1answer3Btn.removeEventListener("click", question1answer3BtnAction);
-}
-function question2deactivateButtons() {
-    question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
-    question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
-    question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
-    question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
-}
-function question3deactivateButtons() {
-    question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
-    question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
-    question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
-    question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
-}
-function question4deactivateButtons() {
-    question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
-    question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
-    question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
-    question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
-}
-function question5deactivateButtons() {
-    question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
-    question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
-    question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
-    question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
-}
-function question6deactivateButtons() {
-    question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
-    question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
-    question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
-    question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
-}
-function question7deactivateButtons() {
-    question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
-    question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
-    question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
-    question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
-}
-function question8deactivateButtons() {
-    question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
-    question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
-    question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
-    question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
-}
-function question9deactivateButtons() {
-    question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
-    question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
-    question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
-    question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
-}
-
-// ==============================================================================================
 // QUESTION 1 | ANSWER BUTTON 2
 // ==============================================================================================
 
 // question1answer0 button
-var question1answer0Btn = document.querySelector("#question1answer0");
+var question1answer0Btn = document.getElementById("question1answer0");
 question1answer0Btn.addEventListener("click", question1answer0BtnAction);
 function question1answer0BtnAction() {
     question1deactivateButtons();
@@ -99,7 +90,7 @@ function question1answer0BtnAction() {
 }
 
 // question1answer1 button
-var question1answer1Btn = document.querySelector("#question1answer1");
+var question1answer1Btn = document.getElementById("question1answer1");
 question1answer1Btn.addEventListener("click", question1answer1BtnAction);
 function question1answer1BtnAction() {
     question1deactivateButtons();
@@ -117,7 +108,7 @@ function question1answer1BtnAction() {
 }
 
 // question1answer2 button
-var question1answer2Btn = document.querySelector("#question1answer2");
+var question1answer2Btn = document.getElementById("question1answer2");
 question1answer2Btn.addEventListener("click", question1answer2BtnAction);
 function question1answer2BtnAction() {
     question1deactivateButtons();
@@ -131,7 +122,7 @@ function question1answer2BtnAction() {
 }
 
 // question1answer3 button
-var question1answer3Btn = document.querySelector("#question1answer3");
+var question1answer3Btn = document.getElementById("question1answer3");
 question1answer3Btn.addEventListener("click", question1answer3BtnAction);
 function question1answer3BtnAction() {
     question1deactivateButtons();
@@ -148,7 +139,7 @@ function question1answer3BtnAction() {
     }
 }
 
-var question1nextBtn = document.querySelector("#question1next");
+var question1nextBtn = document.getElementById("question1next");
 question1nextBtn.addEventListener("click", question1nextBtnAction);
 function question1nextBtnAction() {
     document.getElementById("feedbackText").innerText = "";
@@ -162,7 +153,7 @@ function question1nextBtnAction() {
 // ==============================================================================================
 
 // question2answer0 button
-var question2answer0Btn = document.querySelector("#question2answer0");
+var question2answer0Btn = document.getElementById("question2answer0");
 question2answer0Btn.addEventListener("click", question2answer0BtnAction);
 function question2answer0BtnAction() {
     question2deactivateButtons();
@@ -180,7 +171,7 @@ function question2answer0BtnAction() {
 }
 
 // question2answer1 button
-var question2answer1Btn = document.querySelector("#question2answer1");
+var question2answer1Btn = document.getElementById("question2answer1");
 question2answer1Btn.addEventListener("click", question2answer1BtnAction);
 function question2answer1BtnAction() {
     question2deactivateButtons();
@@ -194,7 +185,7 @@ function question2answer1BtnAction() {
 }
 
 // question2answer2 button
-var question2answer2Btn = document.querySelector("#question2answer2");
+var question2answer2Btn = document.getElementById("question2answer2");
 question2answer2Btn.addEventListener("click", question2answer2BtnAction);
 function question2answer2BtnAction() {
     question2deactivateButtons();
@@ -212,7 +203,7 @@ function question2answer2BtnAction() {
 }
 
 // question2answer3 button
-var question2answer3Btn = document.querySelector("#question2answer3");
+var question2answer3Btn = document.getElementById("question2answer3");
 question2answer3Btn.addEventListener("click", question2answer3BtnAction);
 function question2answer3BtnAction() {
     question2deactivateButtons();
@@ -229,7 +220,7 @@ function question2answer3BtnAction() {
     }
 }
 
-var question2nextBtn = document.querySelector("#question2next");
+var question2nextBtn = document.getElementById("question2next");
 question2nextBtn.addEventListener("click", question2nextBtnAction);
 function question2nextBtnAction() {
     document.getElementById("feedbackText").innerText = "";
@@ -243,7 +234,7 @@ function question2nextBtnAction() {
 // ==============================================================================================
 
 // question3answer0 button
-var question3answer0Btn = document.querySelector("#question3answer0");
+var question3answer0Btn = document.getElementById("question3answer0");
 question3answer0Btn.addEventListener("click", question3answer0BtnAction);
 function question3answer0BtnAction() {
     question3deactivateButtons();
@@ -261,7 +252,7 @@ function question3answer0BtnAction() {
 }
 
 // question3answer1 button
-var question3answer1Btn = document.querySelector("#question3answer1");
+var question3answer1Btn = document.getElementById("question3answer1");
 question3answer1Btn.addEventListener("click", question3answer1BtnAction);
 function question3answer1BtnAction() {
     question3deactivateButtons();
@@ -279,7 +270,7 @@ function question3answer1BtnAction() {
 }
 
 // question3answer2 button
-var question3answer2Btn = document.querySelector("#question3answer2");
+var question3answer2Btn = document.getElementById("question3answer2");
 question3answer2Btn.addEventListener("click", question3answer2BtnAction);
 function question3answer2BtnAction() {
     question3deactivateButtons();
@@ -293,7 +284,7 @@ function question3answer2BtnAction() {
 }
 
 // question3answer3 button
-var question3answer3Btn = document.querySelector("#question3answer3");
+var question3answer3Btn = document.getElementById("question3answer3");
 question3answer3Btn.addEventListener("click", question3answer3BtnAction);
 function question3answer3BtnAction() {
     question3deactivateButtons();
@@ -310,7 +301,7 @@ function question3answer3BtnAction() {
     }
 }
 
-var question3nextBtn = document.querySelector("#question3next");
+var question3nextBtn = document.getElementById("question3next");
 question3nextBtn.addEventListener("click", question3nextBtnAction);
 function question3nextBtnAction() {
     document.getElementById("feedbackText").innerText = "";
@@ -324,7 +315,7 @@ function question3nextBtnAction() {
 // ==============================================================================================
 
 // question4answer0 button
-var question4answer0Btn = document.querySelector("#question4answer0");
+var question4answer0Btn = document.getElementById("question4answer0");
 question4answer0Btn.addEventListener("click", question4answer0BtnAction);
 function question4answer0BtnAction() {
     question4deactivateButtons();
@@ -342,7 +333,7 @@ function question4answer0BtnAction() {
 }
 
 // question4answer1 button
-var question4answer1Btn = document.querySelector("#question4answer1");
+var question4answer1Btn = document.getElementById("question4answer1");
 question4answer1Btn.addEventListener("click", question4answer1BtnAction);
 function question4answer1BtnAction() {
     question4deactivateButtons();
@@ -360,7 +351,7 @@ function question4answer1BtnAction() {
 }
 
 // question4answer2 button
-var question4answer2Btn = document.querySelector("#question4answer2");
+var question4answer2Btn = document.getElementById("question4answer2");
 question4answer2Btn.addEventListener("click", question4answer2BtnAction);
 function question4answer2BtnAction() {
     question4deactivateButtons();
@@ -378,7 +369,7 @@ function question4answer2BtnAction() {
 }
 
 // question4answer3 button
-var question4answer3Btn = document.querySelector("#question4answer3");
+var question4answer3Btn = document.getElementById("question4answer3");
 question4answer3Btn.addEventListener("click", question4answer3BtnAction);
 function question4answer3BtnAction() {
     question4deactivateButtons();
@@ -391,7 +382,7 @@ function question4answer3BtnAction() {
     currentScore++;
 }
 
-var question4nextBtn = document.querySelector("#question4next");
+var question4nextBtn = document.getElementById("question4next");
 question4nextBtn.addEventListener("click", question4nextBtnAction);
 function question4nextBtnAction() {
     document.getElementById("feedbackText").innerText = "";
@@ -405,7 +396,7 @@ function question4nextBtnAction() {
 // ==============================================================================================
 
 // question5answer0 button
-var question5answer0Btn = document.querySelector("#question5answer0");
+var question5answer0Btn = document.getElementById("question5answer0");
 question5answer0Btn.addEventListener("click", question5answer0BtnAction);
 function question5answer0BtnAction() {
     question5deactivateButtons();
@@ -419,7 +410,7 @@ function question5answer0BtnAction() {
 }
 
 // question5answer1 button
-var question5answer1Btn = document.querySelector("#question5answer1");
+var question5answer1Btn = document.getElementById("question5answer1");
 question5answer1Btn.addEventListener("click", question5answer1BtnAction);
 function question5answer1BtnAction() {
     question5deactivateButtons();
@@ -437,7 +428,7 @@ function question5answer1BtnAction() {
 }
 
 // question5answer2 button
-var question5answer2Btn = document.querySelector("#question5answer2");
+var question5answer2Btn = document.getElementById("question5answer2");
 question5answer2Btn.addEventListener("click", question5answer2BtnAction);
 function question5answer2BtnAction() {
     question5deactivateButtons();
@@ -455,7 +446,7 @@ function question5answer2BtnAction() {
 }
 
 // question5answer3 button
-var question5answer3Btn = document.querySelector("#question5answer3");
+var question5answer3Btn = document.getElementById("question5answer3");
 question5answer3Btn.addEventListener("click", question5answer3BtnAction);
 function question5answer3BtnAction() {
     question5deactivateButtons();
@@ -472,7 +463,7 @@ function question5answer3BtnAction() {
     }
 }
 
-var question5nextBtn = document.querySelector("#question5next");
+var question5nextBtn = document.getElementById("question5next");
 question5nextBtn.addEventListener("click", question5nextBtnAction);
 function question5nextBtnAction() {
     document.getElementById("feedbackText").innerText = "";
@@ -486,7 +477,7 @@ function question5nextBtnAction() {
 // ==============================================================================================
 
 // question6answer0 button
-var question6answer0Btn = document.querySelector("#question6answer0");
+var question6answer0Btn = document.getElementById("question6answer0");
 question6answer0Btn.addEventListener("click", question6answer0BtnAction);
 function question6answer0BtnAction() {
     question6deactivateButtons();
@@ -504,7 +495,7 @@ function question6answer0BtnAction() {
 }
 
 // question6answer1 button
-var question6answer1Btn = document.querySelector("#question6answer1");
+var question6answer1Btn = document.getElementById("question6answer1");
 question6answer1Btn.addEventListener("click", question6answer1BtnAction);
 function question6answer1BtnAction() {
     question6deactivateButtons();
@@ -518,7 +509,7 @@ function question6answer1BtnAction() {
 }
 
 // question6answer2 button
-var question6answer2Btn = document.querySelector("#question6answer2");
+var question6answer2Btn = document.getElementById("question6answer2");
 question6answer2Btn.addEventListener("click", question6answer2BtnAction);
 function question6answer2BtnAction() {
     question6deactivateButtons();
@@ -536,7 +527,7 @@ function question6answer2BtnAction() {
 }
 
 // question6answer3 button
-var question6answer3Btn = document.querySelector("#question6answer3");
+var question6answer3Btn = document.getElementById("question6answer3");
 question6answer3Btn.addEventListener("click", question6answer3BtnAction);
 function question6answer3BtnAction() {
     question6deactivateButtons();
@@ -553,7 +544,7 @@ function question6answer3BtnAction() {
     }
 }
 
-var question6nextBtn = document.querySelector("#question6next");
+var question6nextBtn = document.getElementById("question6next");
 question6nextBtn.addEventListener("click", question6nextBtnAction);
 function question6nextBtnAction() {
     document.getElementById("feedbackText").innerText = "";
@@ -567,7 +558,7 @@ function question6nextBtnAction() {
 // ==============================================================================================
 
 // question7answer0 button
-var question7answer0Btn = document.querySelector("#question7answer0");
+var question7answer0Btn = document.getElementById("question7answer0");
 question7answer0Btn.addEventListener("click", question7answer0BtnAction);
 function question7answer0BtnAction() {
     question7deactivateButtons();
@@ -581,7 +572,7 @@ function question7answer0BtnAction() {
 }
 
 // question7answer1 button
-var question7answer1Btn = document.querySelector("#question7answer1");
+var question7answer1Btn = document.getElementById("question7answer1");
 question7answer1Btn.addEventListener("click", question7answer1BtnAction);
 function question7answer1BtnAction() {
     question7deactivateButtons();
@@ -599,7 +590,7 @@ function question7answer1BtnAction() {
 }
 
 // question7answer2 button
-var question7answer2Btn = document.querySelector("#question7answer2");
+var question7answer2Btn = document.getElementById("question7answer2");
 question7answer2Btn.addEventListener("click", question7answer2BtnAction);
 function question7answer2BtnAction() {
     question7deactivateButtons();
@@ -617,7 +608,7 @@ function question7answer2BtnAction() {
 }
 
 // question7answer3 button
-var question7answer3Btn = document.querySelector("#question7answer3");
+var question7answer3Btn = document.getElementById("question7answer3");
 question7answer3Btn.addEventListener("click", question7answer3BtnAction);
 function question7answer3BtnAction() {
     question7deactivateButtons();
@@ -634,7 +625,7 @@ function question7answer3BtnAction() {
     }
 }
 
-var question7nextBtn = document.querySelector("#question7next");
+var question7nextBtn = document.getElementById("question7next");
 question7nextBtn.addEventListener("click", question7nextBtnAction);
 function question7nextBtnAction() {
     document.getElementById("feedbackText").innerText = "";
@@ -648,7 +639,7 @@ function question7nextBtnAction() {
 // ==============================================================================================
 
 // question8answer0 button
-var question8answer0Btn = document.querySelector("#question8answer0");
+var question8answer0Btn = document.getElementById("question8answer0");
 question8answer0Btn.addEventListener("click", question8answer0BtnAction);
 function question8answer0BtnAction() {
     question8deactivateButtons();
@@ -666,7 +657,7 @@ function question8answer0BtnAction() {
 }
 
 // question8answer1 button
-var question8answer1Btn = document.querySelector("#question8answer1");
+var question8answer1Btn = document.getElementById("question8answer1");
 question8answer1Btn.addEventListener("click", question8answer1BtnAction);
 function question8answer1BtnAction() {
     question8deactivateButtons();
@@ -684,7 +675,7 @@ function question8answer1BtnAction() {
 }
 
 // question8answer2 button
-var question8answer2Btn = document.querySelector("#question8answer2");
+var question8answer2Btn = document.getElementById("question8answer2");
 question8answer2Btn.addEventListener("click", question8answer2BtnAction);
 function question8answer2BtnAction() {
     question8deactivateButtons();
@@ -702,7 +693,7 @@ function question8answer2BtnAction() {
 }
 
 // question8answer3 button
-var question8answer3Btn = document.querySelector("#question8answer3");
+var question8answer3Btn = document.getElementById("question8answer3");
 question8answer3Btn.addEventListener("click", question8answer3BtnAction);
 function question8answer3BtnAction() {
     question8deactivateButtons();
@@ -715,7 +706,7 @@ function question8answer3BtnAction() {
     currentScore++;
 }
 
-var question8nextBtn = document.querySelector("#question8next");
+var question8nextBtn = document.getElementById("question8next");
 question8nextBtn.addEventListener("click", question8nextBtnAction);
 function question8nextBtnAction() {
     document.getElementById("feedbackText").innerText = "";
@@ -729,7 +720,7 @@ function question8nextBtnAction() {
 // ==============================================================================================
 
 // question9answer0 button
-var question9answer0Btn = document.querySelector("#question9answer0");
+var question9answer0Btn = document.getElementById("question9answer0");
 question9answer0Btn.addEventListener("click", question9answer0BtnAction);
 function question9answer0BtnAction() {
     question9deactivateButtons();
@@ -748,7 +739,7 @@ function question9answer0BtnAction() {
 }
 
 // question9answer1 button
-var question9answer1Btn = document.querySelector("#question9answer1");
+var question9answer1Btn = document.getElementById("question9answer1");
 question9answer1Btn.addEventListener("click", question9answer1BtnAction);
 function question9answer1BtnAction() {
     question9deactivateButtons();
@@ -767,7 +758,7 @@ function question9answer1BtnAction() {
 }
 
 // question9answer2 button
-var question9answer2Btn = document.querySelector("#question9answer2");
+var question9answer2Btn = document.getElementById("question9answer2");
 question9answer2Btn.addEventListener("click", question9answer2BtnAction);
 function question9answer2BtnAction() {
     question9deactivateButtons();
@@ -786,7 +777,7 @@ function question9answer2BtnAction() {
 }
 
 // question9answer3 button
-var question9answer3Btn = document.querySelector("#question9answer3");
+var question9answer3Btn = document.getElementById("question9answer3");
 question9answer3Btn.addEventListener("click", question9answer3BtnAction);
 function question9answer3BtnAction() {
     question9deactivateButtons();
@@ -801,7 +792,7 @@ function question9answer3BtnAction() {
 }
 
 // summary button
-var summarynextBtn = document.querySelector("#summarynext");
+var summarynextBtn = document.getElementById("summarynext");
 summarynextBtn.addEventListener("click", summarynextBtnAction);
 function summarynextBtnAction() {
     document.getElementById("feedbackText").innerText = "";
@@ -835,7 +826,7 @@ function summarynextBtnAction() {
 // ==============================================================================================
 
 // submit button
-var submitBtn = document.querySelector("#submit");
+var submitBtn = document.getElementById("submit");
 submitBtn.addEventListener("click", submitBtnAction);
 
 // or hitting enter on the text field
@@ -848,8 +839,7 @@ document.getElementById("initials")
 });
 
 function submitBtnAction() {
-    //////// NEED TO ADD CODE TO ACTUALLY SUBMIT ////////
-    var initialsInput = document.querySelector("#initials");
+    var initialsInput = document.getElementById("initials");
     var highscoresList = document.getElementById("highscoresList");
     var newHighscore = document.createElement("li");
     var newHighscoreEntry;
@@ -865,7 +855,6 @@ function submitBtnAction() {
     }
     newHighscore.appendChild(document.createTextNode(newHighscoreEntry));
     highscoresList.appendChild(newHighscore);
-    //////////////////////////////////////////////////////
     document.getElementById("summary").style.display = "none";
     document.getElementById("highscores").style.display = "block";
 }
@@ -875,7 +864,7 @@ function submitBtnAction() {
 // ==============================================================================================
 
 // reset quiz button
-var resetBtn = document.querySelector("#reset");
+var resetBtn = document.getElementById("reset");
 resetBtn.addEventListener("click", resetBtnAction);
 function resetBtnAction() {
     // re-active all multiple choice buttons
@@ -957,52 +946,60 @@ function resetBtnAction() {
 }
 
 // ==============================================================================================
-// Timer
+// Low level functions to deactivate buttons (required to avoid users changing responses)
 // ==============================================================================================
 
-var timeInterval;
-const quizTime = 60;
-var timeLeft = quizTime;
-function countdownSecond() {
-    if (timeLeft === 1) {
-        document.getElementById("title").textContent = timeLeft + " second";
-        timeLeft--;
-    } else if (timeLeft > 0) {
-        document.getElementById("title").textContent = timeLeft + " seconds";
-        timeLeft--;
-    } else {
-        document.getElementById("title").textContent = "0 seconds";
-        question1deactivateButtons();
-        question2deactivateButtons();
-        question3deactivateButtons();
-        question4deactivateButtons();
-        question5deactivateButtons();
-        question6deactivateButtons();
-        question7deactivateButtons();
-        question8deactivateButtons();
-        question9deactivateButtons();
-        document.getElementById("question1next").style.display = "none";
-        document.getElementById("question2next").style.display = "none";
-        document.getElementById("question3next").style.display = "none";
-        document.getElementById("question4next").style.display = "none";
-        document.getElementById("question5next").style.display = "none";
-        document.getElementById("question6next").style.display = "none";
-        document.getElementById("question7next").style.display = "none";
-        document.getElementById("question8next").style.display = "none";
-        clearInterval(timeInterval);
-        document.getElementById("feedbackText").innerText = "Time's up!";
-        document.getElementById("summarynext").style.display = "block";
-  }
+function question1deactivateButtons() {
+    question1answer0Btn.removeEventListener("click", question1answer0BtnAction);
+    question1answer1Btn.removeEventListener("click", question1answer1BtnAction);
+    question1answer2Btn.removeEventListener("click", question1answer2BtnAction);
+    question1answer3Btn.removeEventListener("click", question1answer3BtnAction);
 }
-
-function countdown() {
-    timeLeft = quizTime;
-    countdownSecond();
-    timeInterval = setInterval(countdownSecond, 1000);
+function question2deactivateButtons() {
+    question2answer0Btn.removeEventListener("click", question2answer0BtnAction);
+    question2answer1Btn.removeEventListener("click", question2answer1BtnAction);
+    question2answer2Btn.removeEventListener("click", question2answer2BtnAction);
+    question2answer3Btn.removeEventListener("click", question2answer3BtnAction);
 }
-
-// ==============================================================================================
-// Score keeping
-// ==============================================================================================
-
-var currentScore = 0;
+function question3deactivateButtons() {
+    question3answer0Btn.removeEventListener("click", question3answer0BtnAction);
+    question3answer1Btn.removeEventListener("click", question3answer1BtnAction);
+    question3answer2Btn.removeEventListener("click", question3answer2BtnAction);
+    question3answer3Btn.removeEventListener("click", question3answer3BtnAction);
+}
+function question4deactivateButtons() {
+    question4answer0Btn.removeEventListener("click", question4answer0BtnAction);
+    question4answer1Btn.removeEventListener("click", question4answer1BtnAction);
+    question4answer2Btn.removeEventListener("click", question4answer2BtnAction);
+    question4answer3Btn.removeEventListener("click", question4answer3BtnAction);
+}
+function question5deactivateButtons() {
+    question5answer0Btn.removeEventListener("click", question5answer0BtnAction);
+    question5answer1Btn.removeEventListener("click", question5answer1BtnAction);
+    question5answer2Btn.removeEventListener("click", question5answer2BtnAction);
+    question5answer3Btn.removeEventListener("click", question5answer3BtnAction);
+}
+function question6deactivateButtons() {
+    question6answer0Btn.removeEventListener("click", question6answer0BtnAction);
+    question6answer1Btn.removeEventListener("click", question6answer1BtnAction);
+    question6answer2Btn.removeEventListener("click", question6answer2BtnAction);
+    question6answer3Btn.removeEventListener("click", question6answer3BtnAction);
+}
+function question7deactivateButtons() {
+    question7answer0Btn.removeEventListener("click", question7answer0BtnAction);
+    question7answer1Btn.removeEventListener("click", question7answer1BtnAction);
+    question7answer2Btn.removeEventListener("click", question7answer2BtnAction);
+    question7answer3Btn.removeEventListener("click", question7answer3BtnAction);
+}
+function question8deactivateButtons() {
+    question8answer0Btn.removeEventListener("click", question8answer0BtnAction);
+    question8answer1Btn.removeEventListener("click", question8answer1BtnAction);
+    question8answer2Btn.removeEventListener("click", question8answer2BtnAction);
+    question8answer3Btn.removeEventListener("click", question8answer3BtnAction);
+}
+function question9deactivateButtons() {
+    question9answer0Btn.removeEventListener("click", question9answer0BtnAction);
+    question9answer1Btn.removeEventListener("click", question9answer1BtnAction);
+    question9answer2Btn.removeEventListener("click", question9answer2BtnAction);
+    question9answer3Btn.removeEventListener("click", question9answer3BtnAction);
+}
