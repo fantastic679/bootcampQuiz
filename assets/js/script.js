@@ -654,6 +654,7 @@ function summarynextBtnAction() {
     document.getElementById("summarynext").style.display = "none";
     document.getElementById("question9").style.display = "none";
     document.getElementById("summary").style.display = "block";
+    document.getElementById("initials").focus();
 }
 
 // ==============================================================================================
@@ -664,7 +665,14 @@ function summarynextBtnAction() {
 var submitBtn = document.querySelector("#submit");
 submitBtn.addEventListener("click", submitBtnAction);
 function submitBtnAction() {
-    //////// NEEDS TO ADD CODE TO ACTUALLY SUBMIT ////////
+    console.log("ARE YA WINNING, SON?");
+    //////// NEED TO ADD CODE TO ACTUALLY SUBMIT ////////
+    var initialsInput = document.querySelector("#initials");
+    var highscoresList = document.getElementById("highscoresList");
+    var newHighscore = document.createElement("li");
+    newHighscore.appendChild(document.createTextNode(initialsInput.value));
+    highscoresList.appendChild(newHighscore);
+    //////////////////////////////////////////////////////
     document.getElementById("summary").style.display = "none";
     document.getElementById("highscores").style.display = "block";
 }

@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: lightgray;
+    background-color: LightGray;
     max-width: 500px;
     margin: auto;
     padding-top: 200px;
@@ -18,9 +18,9 @@ body {
 }
 
 .button {
-    background-color: darkblue;
+    background-color: DarkBlue;
     border: none;
-    color: lightgray;
+    color: LightGray;
     /* padding: 15px 32px; */
     /* border-radius: 12px; */
     text-align: center;
