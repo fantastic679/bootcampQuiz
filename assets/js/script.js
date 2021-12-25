@@ -664,8 +664,17 @@ function summarynextBtnAction() {
 // submit button
 var submitBtn = document.querySelector("#submit");
 submitBtn.addEventListener("click", submitBtnAction);
+
+// or hitting enter on the text field
+document.getElementById("initials")
+    .addEventListener("keyup", function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+        document.getElementById("submit").click();
+    }
+});
+
 function submitBtnAction() {
-    console.log("ARE YA WINNING, SON?");
     //////// NEED TO ADD CODE TO ACTUALLY SUBMIT ////////
     var initialsInput = document.querySelector("#initials");
     var highscoresList = document.getElementById("highscoresList");
