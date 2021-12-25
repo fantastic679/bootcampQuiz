@@ -1,77 +1,39 @@
-# Thought process
+# Bootcamp Quiz
 
-## Components
+## Synopsis
 
-* Questions
-* High score
-* Timer
-* Maybe a landing page
+This webpage is a simple timed multiple choice quiz which can be adapted to different content. This particular example is a 60 second quiz of 9 multiple choice questions on the topic of basic web development in HTML, CSS and JS. It is called Bootcamp Quiz as the content is of that covered in The Coding Bootcamp at the University of Sydney. This website was developed as one of this bootcamp's homework tasks.
 
-We will make a deliberate attempt at this time not to use third part APIs and try to code from scratch for practice.
+## Source and live demo
 
-## Website structure
+The repository for this quiz is located at https://github.com/fantastic679/bootcampQuiz/.
 
-* When user visits webpage, should be presented with landing page
+A live demo of the webpage can be found at https://fantastic679.github.io/bootcampQuiz/.
 
-* When user clicks start, should take you to questions and the timer should start to stepdown
+## Structure
 
-* When each question is presented, should present stem + answer options
+The website features a homepage that introduces the user and allows them to start the quiz.
 
-* When user select answer, should display whether correct or not, then provide option to proceed to next question
+![Welcome](/assets/screenshots/screenshot1.png?raw=true)
 
-* When all questions are completed OR the timer is up, an end of quiz alert should appear, then allow user to input initials, present a summary and allow users to view the highcores
+Once the quiz is started, a countdown timer is displayed that will end the quiz once the time remaining elapses. The other condition for ending the quiz is the completion of all 9 questions. Terminating the quiz will prompt the user to view the summary.
 
-## Page structure
+![Question](/assets/screenshots/screenshot2.png?raw=true)
 
-Let's try to start of simple first. We can add to this later.
+![Answer](/assets/screenshots/screenshot3.png?raw=true)
 
-Essentially, our website can just have three main sections.
+The summary displays how many questions the user answered correct and the time remaining. They will then be prompted to enter their initials and proceed to the highscore pages.
 
-* Title
-* Body text including any input fields like buttons or text
-* Responsive section which changes user input
+![Summary](/assets/screenshots/screenshot4.png?raw=true)
 
-For example, for the landing page, those elements could have the following content:
+The highscores page displays the summary information for previous runs of the quiz in the same session (will not retain previous information if the page is reloaded) and prompts the user to restart the quiz. This take the user back the homepage.
 
-* **Title:** Welcome to Bootcamp Quiz!
-* **Body text:** This is a timed 1 minute multiple choice quiz of 10 questions relating to the content covered thus far in the Coding Bootcamp.
-  * Button for *Start*
-* **Responsive section:** *empty*
+![Highscores](/assets/screenshots/screenshot5.png?raw=true)
 
-For a question, those elements could be populated as so:
+## Design
 
-* **Title:** Question X | Y seconds remaining
-* **Body text:** Question stem...
-  * Button for *Answer 1*
-  * Button for *Answer 2*
-  * Button for *Answer 3*
-  * Button for *Answer 4*
-* **Responsive section:** *empty*
-  * On response, changes to *Correct!* or *Incorrect!*
-  * Button for *Next question* would also appear
+The website functionality and content is provided on a single HTML page. The CSS ensure the page does not display the majority of this information initially so that users are only shown a landing page in the first instance. JavaScript is used determine which portions of the page are displayed depending on user input, as well as provide the timer functionality.
 
-On quiz completion (time elapsed or nil further questions):
+## Contact
 
-* **Title:** Quiz completed!
-* **Body text:** Either *You ran out of time!* or *You've finished all the questions!*
-  * You scored X correctly out of Y questions correctly.
-  * Spoiler section to see questions and solutions??
-* **Responsive section:** *View highscores!*
-
-Of course, there are many way to do this, but this is just a starting point.
-
-## Changing page context
-
-Our base HTML will have context these three sections.
-We will use some basic CSS to set underlying theme of the page.
-We will use Javascript to dynamically change the context of the page as per user input. 
-
-# Preliminary coding process
-
-After coding this, this began to become very clunky.
-We will redivise our strategy
-We will have everything on the page
-And set things to being hidden
-Only on certain prompts do we hide the current content and show the next content
-I suppose we could leave the title the way it is
-However, I will code this from scratch
+Do not hesitate to contact me at stevenphan@msn.com if you have any questions or concerns.
